@@ -12,7 +12,7 @@ inputs:
     description: 'build scripts'
     default: |
       npm install
-      npm run build
+      npm run build:preview
     required: false
   dist:
     description: 'dist folder to deploy'
