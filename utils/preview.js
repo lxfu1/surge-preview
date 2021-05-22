@@ -3,12 +3,10 @@ const fs = require('fs');
 const path = require('path');
 const github = require('@actions/github');
 const shell = require('shelljs');
-const fse = require('fs-extra');
 const core = require('@actions/core');
 
 const writeFile = (filePath, html) => {
   const fd = path.resolve(__dirname, '..', filePath, 'index.html');
-  const dirname = path.dirname(fd);
 
   const contentBuf = Buffer.from(html || 'test content', {
     encoding: 'utf-8',
@@ -20,13 +18,12 @@ const writeFile = (filePath, html) => {
     console.error('Could not delete file => ', e.message);
   }
 
-  fse.outputFile(fd, contentBuf);
-  // try {
-  //   fs.writeFileSync(fd, contentBuf);
-  //   console.log('Wrote content to file: ', fd);
-  // } catch (e) {
-  //   console.error('Could not write file => ', e.message);
-  // }
+  try {
+    fs.writeFileSync(fd, contentBuf);
+    console.log('Wrote content to file: ', fd);
+  } catch (e) {
+    console.error('Could not write file => ', e.message);
+  }
 };
 
 const allowedVars = [
@@ -38,7 +35,6 @@ const allowedVars = [
 ];
 
 (() => {
-  console.log(core.getInput('project_name'), 'project name');
   const project_name = core.getInput('project_name') || 'G2Plot';
   const project_branch = core.getInput('project_branch') || 'master';
   shell.exec(`npx sh start.sh ${project_name} ${project_branch}`);
@@ -51,8 +47,6 @@ const allowedVars = [
   //     });
   //   console.log(content);
   //   if (!content.length) {
-  //     // 复制本地 g2plot.min.js
-  //     // shell.exec('cp -r ../../G2Plot/dist/g2plot.min.js ../server/static');
   //     console.log(`no content received`);
   //     return writeFile(filePath, 'test content');
   //   }
@@ -71,4 +65,5 @@ const allowedVars = [
   // </div>`;
 
   // return writeFile(filePath, html);
+  return;
 })();
