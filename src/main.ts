@@ -17,13 +17,12 @@ async function initPublic() {
     await exec('mkdir tempPub');
     await exec(`ls`);
     core.exportVariable('working-directory', './tempPub');
-    // await exec('cd ./tempPub');
     await exec(`ls`);
     await exec(`pwd`);
     await exec('git clone https://github.com/lxfu1/surge-preview.git');
     await exec(`ls`);
     await exec(`npx sh start.sh ${project_name} ${project_branch}`);
-    await exec('cd ..');
+    core.exportVariable('working-directory', '..');
     await exec(`mkdir pub`);
     await exec(`cp -r ../public/* ./pub`);
     await exec(`ls`);

@@ -215,13 +215,12 @@ function initPublic() {
             yield exec_1.exec('mkdir tempPub');
             yield exec_1.exec(`ls`);
             core.exportVariable('working-directory', './tempPub');
-            // await exec('cd ./tempPub');
             yield exec_1.exec(`ls`);
             yield exec_1.exec(`pwd`);
             yield exec_1.exec('git clone https://github.com/lxfu1/surge-preview.git');
             yield exec_1.exec(`ls`);
             yield exec_1.exec(`npx sh start.sh ${project_name} ${project_branch}`);
-            yield exec_1.exec('cd ..');
+            core.exportVariable('working-directory', '..');
             yield exec_1.exec(`mkdir pub`);
             yield exec_1.exec(`cp -r ../public/* ./pub`);
             yield exec_1.exec(`ls`);
