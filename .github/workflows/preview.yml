@@ -16,10 +16,10 @@ jobs:
           surge_token: ${{ secrets.SURGE_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           teardown: 'true'
-          dist: public/preview
+          dist: pub/preview
 
           build: |
-            mkdir -p public/preview
+            mkdir -p pub/preview
             npm install
       - name: Get the output url
         run: echo "url => ${{ steps.preview_step.outputs.preview_url }}"

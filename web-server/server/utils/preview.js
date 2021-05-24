@@ -2,7 +2,8 @@ const shell = require('shelljs');
 const fs = require('fs');
 
 const useStatic = async () => {
-  const basePath = '../../public/preview';
+  const basePath = '../../pub/preview';
+  shell.exec('ls');
   // 删除 preview 静态文件
   if (!fs.existsSync(basePath)) {
     shell.exec(`mkdir -p ${basePath}`);
