@@ -4,7 +4,7 @@ const fs = require('fs');
 const useStatic = async () => {
   const basePath = '../../public/preview';
   // 删除 preview 静态文件
-  if (!fs.existsSync('/')) {
+  if (!fs.existsSync(basePath)) {
     shell.exec(`mkdir -p ${basePath}`);
   } else {
     shell.exec(`rm -rf ${basePath}/*`);

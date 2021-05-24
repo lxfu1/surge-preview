@@ -41,10 +41,8 @@ jobs:
         with:
           surge_token: ${{ secrets.SURGE_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          dist: public
           build: |
             npm install
-            npm run build
       - name: Get the preview_url
         run: echo "url => ${{ steps.preview_step.outputs.preview_url }}"
 ```
@@ -67,10 +65,8 @@ jobs:
         with:
           surge_token: ${{ secrets.SURGE_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          dist: public
           build: |
             npm install
-            npm run build
   preview-job-2:
     runs-on: ubuntu-latest
     steps:
@@ -79,7 +75,6 @@ jobs:
         with:
           surge_token: ${{ secrets.SURGE_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          dist: public
           build: |
             npm install
             npm run build
@@ -112,7 +107,6 @@ jobs:
         with:
           surge_token: ${{ secrets.SURGE_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          dist: public
           teardown: 'true'
           build: |
             npm install
@@ -124,7 +118,6 @@ jobs:
 - `surge_token`: [Getting your Surge token](https://surge.sh/help/integrating-with-circleci).
 - `github_token`: `secrets.GITHUB_TOKEN`.
 - `build`: build scripts to run before deploy.
-- `dist`: dist folder deployed to [surge.sh](https://surge.sh/).
 - `failOnError`: Set `failed` if a deployment throws error, defaults to `false`.
 - `teardown`: Determines if the preview instance will be torn down on PR close, defaults to `false`.
 
