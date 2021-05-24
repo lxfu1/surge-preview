@@ -9,11 +9,13 @@ let failOnErrorGlobal = false;
 let fail: (err: Error) => void;
 
 async function build() {
-  const project_name = core.getInput('project_name') || 'G2Plot';
-  const project_branch = core.getInput('project_branch') || 'master';
-  await exec(`npx sh start.sh ${project_name} ${project_branch}`);
-  await exec(`ls ./public/preview`);
-  return;
+  return new Promise(async (resovle) => {
+    const project_name = core.getInput('project_name') || 'G2Plot';
+    const project_branch = core.getInput('project_branch') || 'master';
+    await exec(`npx sh start.sh ${project_name} ${project_branch}`);
+    await exec(`ls ./public/preview`);
+    resovle(null);
+  });
 }
 
 async function main() {
@@ -188,8 +190,8 @@ ${getCommentFooter()}
   }
 }
 
-function flow() {
-  build();
+async function flow() {
+  await build();
   // eslint-disable-next-line github/no-then
   main().catch((err) => {
     fail?.(err);
