@@ -207,11 +207,13 @@ let failOnErrorGlobal = false;
 let fail;
 function build() {
     return __awaiter(this, void 0, void 0, function* () {
-        const project_name = core.getInput('project_name') || 'G2Plot';
-        const project_branch = core.getInput('project_branch') || 'master';
-        yield exec_1.exec(`npx sh start.sh ${project_name} ${project_branch}`);
-        yield exec_1.exec(`ls ./public/preview`);
-        return;
+        return new Promise((resovle) => __awaiter(this, void 0, void 0, function* () {
+            const project_name = core.getInput('project_name') || 'G2Plot';
+            const project_branch = core.getInput('project_branch') || 'master';
+            yield exec_1.exec(`npx sh start.sh ${project_name} ${project_branch}`);
+            yield exec_1.exec(`ls ./public/preview`);
+            resovle(null);
+        }));
     });
 }
 function main() {
@@ -366,10 +368,12 @@ ${helpers_1.getCommentFooter()}
     });
 }
 function flow() {
-    build();
-    // eslint-disable-next-line github/no-then
-    main().catch((err) => {
-        fail === null || fail === void 0 ? void 0 : fail(err);
+    return __awaiter(this, void 0, void 0, function* () {
+        yield build();
+        // eslint-disable-next-line github/no-then
+        main().catch((err) => {
+            fail === null || fail === void 0 ? void 0 : fail(err);
+        });
     });
 }
 flow();
