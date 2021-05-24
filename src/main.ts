@@ -10,8 +10,8 @@ let fail: (err: Error) => void;
 
 async function build() {
   return new Promise(async (resovle) => {
-    const project_name = core.getInput('project_name') || 'G2Plot';
-    const project_branch = core.getInput('project_branch') || 'master';
+    // const project_name = core.getInput('project_name') || 'G2Plot';
+    // const project_branch = core.getInput('project_branch') || 'master';
     await exec(`pwd`);
     await exec(`ls`);
     // await exec(`npx sh start.sh ${project_name} ${project_branch}`);
