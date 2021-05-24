@@ -38,31 +38,32 @@ const allowedVars = [
   const project_name = core.getInput('project_name') || 'G2Plot';
   const project_branch = core.getInput('project_branch') || 'master';
   shell.exec(`npx sh start.sh ${project_name} ${project_branch}`);
-  const filePath = process.argv.slice(2)[0];
-  const valueMap = process.env;
-  const content = Object.entries(valueMap)
-    .filter(([x]) => allowedVars.includes(x))
-    .map(([key, val]) => {
-      return `<div><b>${key}:</b> ${val}</div>`;
-    });
-  console.log(content);
-  if (!content.length) {
-    console.log(`no content received`);
-    return writeFile(filePath, 'test content');
-  }
+  //   const filePath = process.argv.slice(2)[0];
+  //   const valueMap = process.env;
+  //   const content = Object.entries(valueMap)
+  //     .filter(([x]) => allowedVars.includes(x))
+  //     .map(([key, val]) => {
+  //       return `<div><b>${key}:</b> ${val}</div>`;
+  //     });
+  //   console.log(content);
+  //   if (!content.length) {
+  //     console.log(`no content received`);
+  //     return writeFile(filePath, 'test content');
+  //   }
 
-  content.push(
-    `<div><b>github.context.payload.pull_request.head.ref</b>: ${github.context.payload.pull_request.head.ref}</div>`
-  );
-  content.push(
-    `<div><b>github.context.payload.pull_request.head.sha</b>: ${github.context.payload.pull_request.head.sha}</div>`
-  );
+  //   content.push(
+  //     `<div><b>github.context.payload.pull_request.head.ref</b>: ${github.context.payload.pull_request.head.ref}</div>`
+  //   );
+  //   content.push(
+  //     `<div><b>github.context.payload.pull_request.head.sha</b>: ${github.context.payload.pull_request.head.sha}</div>`
+  //   );
 
-  console.log(`received: ${content}`);
-  const contentHtml = content.join('\n   ');
-  const html = `<div>
-     ${contentHtml}
-  </div>`;
+  //   console.log(`received: ${content}`);
+  //   const contentHtml = content.join('\n   ');
+  //   const html = `<div>
+  //    ${contentHtml}
+  // </div>`;
 
-  return writeFile(filePath, html);
+  // return writeFile(filePath, html);
+  return;
 })();
