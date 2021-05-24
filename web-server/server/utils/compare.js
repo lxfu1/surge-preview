@@ -2,7 +2,7 @@ const fs = require('fs');
 const chalk = require('chalk');
 const PNG = require('pngjs').PNG;
 const pixelmatch = require('pixelmatch');
-const openImage = require('./open');
+const useStatic = require('./preview');
 
 const compareImage = (path1, path2, basePath) => {
   console.log(chalk.green('\n****** 截图比对中 ******\n'));
@@ -16,7 +16,7 @@ const compareImage = (path1, path2, basePath) => {
   const diffPath = `${basePath}/diff.png`;
   fs.writeFileSync(diffPath, PNG.sync.write(diff));
   console.log(chalk.green('\n****** 截图比对完成 ******\n'));
-  openImage(diffPath);
+  useStatic();
 };
 
 module.exports = compareImage;

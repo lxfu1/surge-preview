@@ -1,6 +1,6 @@
 name: 'Surge Preview For AntV'
 description: 'Preview website in surge.sh for every pull request'
-author: 'afc163'
+author: 'lxfu1'
 inputs:
   surge_token:
     description: 'surge.sh token'
@@ -8,11 +8,17 @@ inputs:
   github_token:
     description: 'github token'
     required: true
+  project_name:
+    description: 'project name'
+    default: 'G2Plot'
+  project_branch:
+    description: 'project branch'
+    default: 'master'
   build:
     description: 'build scripts'
     default: |
       npm install
-      npm run build
+      npm run build:preview
     required: false
   dist:
     description: 'dist folder to deploy'

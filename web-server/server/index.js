@@ -94,4 +94,4 @@ app.on('error', (err, ctx) => {
 app.listen(BaseConfig.port);
 console.log(chalk.green('\n启动成功' + BaseConfig.port));
 
-// createBrowser();
+createBrowser();

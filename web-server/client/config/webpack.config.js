@@ -8,6 +8,7 @@ const PnpWebpackPlugin = require('pnp-webpack-plugin'); // yarn 团队开发，�
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // 生成 index.html
 const InlineChunkHtmlPlugin = require('react-dev-utils/InlineChunkHtmlPlugin'); // js代码内置到 html 中， 结合 html-webpack-plugin 4.0 使用
 const TerserPlugin = require('terser-webpack-plugin'); // 代码压缩，支持 es6 语法，不再需要 babel
+const MiniCssExtractPlugin = require('mini-css-extract-plugin'); // 抽取 css 到单独文件
 const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin'); // 在 index.html 中内置变量，配合 html-webpack-plugin 使用
 const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin'); // 缺少相关包时报错
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin'); // 禁止导入 src | node_modules 以为的包
@@ -91,6 +92,12 @@ module.exports = function (webpackEnv) {
   const getStyleLoaders = (cssOptions, preProcessor) => {
     const loaders = [
       isEnvDevelopment && require.resolve('style-loader'),
+      isEnvProduction && {
+				loader: MiniCssExtractPlugin.loader,
+				// css is located in `assets/css`, use '../../' to locate index.html folder
+				// in production `paths.publicUrlOrPath` can be a relative path
+				options: paths.publicUrlOrPath.startsWith('.') ? { publicPath: '../../' } : {},
+			},
       {
         loader: require.resolve('css-loader'),
         options: cssOptions,
@@ -546,7 +553,14 @@ module.exports = function (webpackEnv) {
       // makes the discovery automatic so you don't have to restart.
       // See https://github.com/facebook/create-react-app/issues/186
       isEnvDevelopment &&
-        new WatchMissingNodeModulesPlugin(paths.appNodeModules),
+      new WatchMissingNodeModulesPlugin(paths.appNodeModules),
+      isEnvProduction &&
+      new MiniCssExtractPlugin({
+        // Options similar to the same options in webpackOptions.output
+        // both options are optional
+        filename: 'assets/css/[name].css',
+        chunkFilename: 'assets/css/[name].chunk.css',
+      }),
       // Moment.js is an extremely popular library that bundles large locale files
       // by default due to how webpack interprets its code. This is a practical
       // solution that requires the user to opt into importing specific locales.

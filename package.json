@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/afc163/surge-preview.git"
+    "url": "git+https://github.com/lxfu1/surge-preview.git"
   },
   "keywords": [
     "actions",
@@ -26,7 +26,6 @@
     "pull-requests",
     "deploy"
   ],
-  "author": "afc163 <afc163@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.2.6",
@@ -41,7 +40,6 @@
     "eslint": "^7.14.0",
     "eslint-plugin-github": "^4.1.1",
     "eslint-plugin-jest": "^24.1.5",
-    "fs-extra": "^10.0.0",
     "husky": "^4.2.5",
     "jest": "^26.6.3",
     "jest-circus": "^26.6.3",

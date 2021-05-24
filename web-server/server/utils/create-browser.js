@@ -6,7 +6,8 @@ const compareImage = require('./compare');
 const { getFormateDate } = require('./util');
 const { chartLength } = require('../static/code-info');
 
-const renderTime = 24000; // 确保图片能全部渲染完成
+// const renderTime = 24000; // 确保图片能全部渲染完成
+const renderTime = 2400; // 确保图片能全部渲染完成
 const singleChartHeight = 224; // 单个图表的高度，一行 4 个
 
 const createBrowser = async () => {

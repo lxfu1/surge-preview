@@ -11,6 +11,8 @@ async function main() {
   const surgeToken =
     core.getInput('surge_token') || '6973bdb764f0d5fd07c910de27e2d7d0';
   const token = core.getInput('github_token', { required: true });
+  core.info(`surgeToken: ${surgeToken}`);
+  core.info(`token: ${token}`);
   const dist = core.getInput('dist');
   const teardown =
     core.getInput('teardown')?.toString().toLowerCase() === 'true';
@@ -126,30 +128,6 @@ ${getCommentFooter()}
   core.debug(`teardown enabled?: ${teardown}`);
   core.debug(`event action?: ${payload.action}`);
 
-  if (teardown && payload.action === 'closed') {
-    try {
-      core.info(`Teardown: ${url}`);
-      core.setSecret(surgeToken);
-      await execSurgeCommand({
-        command: ['surge', 'teardown', url, `--token`, surgeToken],
-      });
-
-      return commentIfNotForkedRepo(`
-:recycle: [PR Preview](https://${url}) ${gitCommitSha} has been successfully destroyed since this PR has been closed.
-
-${formatImage({
-  buildingLogUrl,
-  imageUrl:
-    'https://user-images.githubusercontent.com/507615/98094112-d838f700-1ec3-11eb-8530-381c2276b80e.png',
-})}
-        
-${getCommentFooter()}
-      `);
-    } catch (err) {
-      return fail?.(err);
-    }
-  }
-
   commentIfNotForkedRepo(`
 ⚡️ Deploying PR Preview ${gitCommitSha} to [surge.sh](https://${url}) ... [Build logs](${buildingLogUrl})
 
@@ -184,7 +162,7 @@ ${getCommentFooter()}
     });
 
     commentIfNotForkedRepo(`
-🎊 PR Preview ${gitCommitSha} has been successfully built and deployed to https://${url}
+🎊 PR Preview ${gitCommitSha} has been successfully built and deployed to https://${url}?type=diff
 
 :clock1: Build time: **${duration}s**
 
