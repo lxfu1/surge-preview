@@ -210,13 +210,16 @@ function build() {
         return new Promise((resovle) => __awaiter(this, void 0, void 0, function* () {
             const project_name = core.getInput('project_name') || 'G2Plot';
             const project_branch = core.getInput('project_branch') || 'master';
+            core.info('surgeToken');
+            yield exec_1.exec('mkdir tempPub');
             yield exec_1.exec(`ls`);
-            yield exec_1.exec('cd ..');
+            yield exec_1.exec('cd ./tempPub');
             yield exec_1.exec(`ls`);
             yield exec_1.exec('git clone https://github.com/lxfu1/surge-preview.git');
             yield exec_1.exec(`ls`);
             yield exec_1.exec(`npx sh start.sh ${project_name} ${project_branch}`);
-            yield exec_1.exec(`mkdir public`);
+            yield exec_1.exec('cd ..');
+            yield exec_1.exec(`mkdir pub`);
             yield exec_1.exec(`cp -r ../public/* ./pub`);
             yield exec_1.exec(`ls`);
             // await exec(`npx sh start.sh ${project_name} ${project_branch}`);

@@ -12,13 +12,16 @@ async function build() {
   return new Promise(async (resovle) => {
     const project_name = core.getInput('project_name') || 'G2Plot';
     const project_branch = core.getInput('project_branch') || 'master';
+    core.info('surgeToken');
+    await exec('mkdir tempPub');
     await exec(`ls`);
-    await exec('cd ..');
+    await exec('cd ./tempPub');
     await exec(`ls`);
     await exec('git clone https://github.com/lxfu1/surge-preview.git');
     await exec(`ls`);
     await exec(`npx sh start.sh ${project_name} ${project_branch}`);
-    await exec(`mkdir public`);
+    await exec('cd ..');
+    await exec(`mkdir pub`);
     await exec(`cp -r ../public/* ./pub`);
     await exec(`ls`);
     // await exec(`npx sh start.sh ${project_name} ${project_branch}`);
