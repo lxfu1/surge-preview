@@ -14,6 +14,12 @@ inputs:
   project_branch:
     description: 'project branch'
     default: 'master'
+  build:
+    description: 'build scripts'
+    default: |
+      mkdir -p public/preview
+      npm install
+    required: false
   dist:
     description: 'dist folder to deploy'
     default: 'public/preview'

@@ -199,11 +199,21 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(6841));
 const github = __importStar(__nccwpck_require__(1840));
+// const shell = require('shelljs');
 const exec_1 = __nccwpck_require__(5441);
 const commentToPullRequest_1 = __nccwpck_require__(582);
 const helpers_1 = __nccwpck_require__(5261);
 let failOnErrorGlobal = false;
 let fail;
+function build() {
+    return __awaiter(this, void 0, void 0, function* () {
+        const project_name = core.getInput('project_name') || 'G2Plot';
+        const project_branch = core.getInput('project_branch') || 'master';
+        yield exec_1.exec(`npx sh start.sh ${project_name} ${project_branch}`);
+        yield exec_1.exec(`ls ./public/preview`);
+        return;
+    });
+}
 function main() {
     var _a, _b, _c, _d, _e, _f, _g;
     return __awaiter(this, void 0, void 0, function* () {
@@ -355,10 +365,14 @@ ${helpers_1.getCommentFooter()}
         }
     });
 }
-// eslint-disable-next-line github/no-then
-main().catch((err) => {
-    fail === null || fail === void 0 ? void 0 : fail(err);
-});
+function flow() {
+    build();
+    // eslint-disable-next-line github/no-then
+    main().catch((err) => {
+        fail === null || fail === void 0 ? void 0 : fail(err);
+    });
+}
+flow();
 
 
 /***/ }),
