@@ -1,8 +1,4 @@
-export const codes = [
-  {
-    fileName: 'basic-annotation.ts',
-    fileIndex: 0,
-    code: `(function (global, factory) {
+export const codes = [{fileName: "basic-annotation.ts", fileIndex: 0, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -44,12 +40,7 @@ export const codes = [
     });
     area.render();
   });
-});`,
-  },
-  {
-    fileName: 'basic-gradients.ts',
-    fileIndex: 1,
-    code: `(function (global, factory) {
+});`},{fileName: "basic-gradients.ts", fileIndex: 1, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -83,12 +74,7 @@ export const codes = [
     });
     area.render();
   });
-});`,
-  },
-  {
-    fileName: 'basic-slider.ts',
-    fileIndex: 2,
-    code: `(function (global, factory) {
+});`},{fileName: "basic-slider.ts", fileIndex: 2, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -124,12 +110,7 @@ export const codes = [
     });
     area.render();
   });
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 3,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 3, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -157,12 +138,7 @@ export const codes = [
     });
     area.render();
   });
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 4,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 4, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -201,12 +177,7 @@ export const codes = [
     });
     area.render();
   });
-});`,
-  },
-  {
-    fileName: 'area-large-data.ts',
-    fileIndex: 5,
-    code: `(function (global, factory) {
+});`},{fileName: "area-large-data.ts", fileIndex: 5, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -250,12 +221,7 @@ export const codes = [
     });
     area.render();
   });
-});`,
-  },
-  {
-    fileName: 'basic-slider.ts',
-    fileIndex: 6,
-    code: `(function (global, factory) {
+});`},{fileName: "basic-slider.ts", fileIndex: 6, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -285,12 +251,7 @@ export const codes = [
     });
     area.render();
   });
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 7,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 7, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -316,12 +277,7 @@ export const codes = [
     });
     area.render();
   });
-});`,
-  },
-  {
-    fileName: 'bar-background.ts',
-    fileIndex: 8,
-    code: `(function (global, factory) {
+});`},{fileName: "bar-background.ts", fileIndex: 8, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -379,12 +335,7 @@ export const codes = [
     }]
   });
   bar.render();
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 9,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 9, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -425,12 +376,7 @@ export const codes = [
     }
   });
   bar.render();
-});`,
-  },
-  {
-    fileName: 'color.ts',
-    fileIndex: 10,
-    code: `(function (global, factory) {
+});`},{fileName: "color.ts", fileIndex: 10, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -490,12 +436,7 @@ export const codes = [
     }
   });
   barPlot.render();
-});`,
-  },
-  {
-    fileName: 'conversion-tag.ts',
-    fileIndex: 11,
-    code: `(function (global, factory) {
+});`},{fileName: "conversion-tag.ts", fileIndex: 11, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -533,12 +474,7 @@ export const codes = [
     conversionTag: {}
   });
   barPlot.render();
-});`,
-  },
-  {
-    fileName: 'scrollbar.ts',
-    fileIndex: 12,
-    code: `(function (global, factory) {
+});`},{fileName: "scrollbar.ts", fileIndex: 12, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -571,12 +507,7 @@ export const codes = [
     });
     column.render();
   });
-});`,
-  },
-  {
-    fileName: 'width-ratio.ts',
-    fileIndex: 13,
-    code: `(function (global, factory) {
+});`},{fileName: "width-ratio.ts", fileIndex: 13, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -631,12 +562,7 @@ export const codes = [
     }
   });
   barPlot.render();
-});`,
-  },
-  {
-    fileName: 'width.ts',
-    fileIndex: 14,
-    code: `(function (global, factory) {
+});`},{fileName: "width.ts", fileIndex: 14, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -692,12 +618,7 @@ export const codes = [
     maxBarWidth: 20
   });
   barPlot.render();
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 15,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 15, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -781,12 +702,7 @@ export const codes = [
     }
   });
   stackedBarPlot.render();
-});`,
-  },
-  {
-    fileName: 'corner-radius.ts',
-    fileIndex: 16,
-    code: `(function (global, factory) {
+});`},{fileName: "corner-radius.ts", fileIndex: 16, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -860,12 +776,7 @@ export const codes = [
     }
   });
   stackedBarPlot.render();
-});`,
-  },
-  {
-    fileName: 'dodge-padding.ts',
-    fileIndex: 17,
-    code: `(function (global, factory) {
+});`},{fileName: "dodge-padding.ts", fileIndex: 17, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -946,12 +857,7 @@ export const codes = [
     }
   });
   stackedBarPlot.render();
-});`,
-  },
-  {
-    fileName: 'interval-padding.ts',
-    fileIndex: 18,
-    code: `(function (global, factory) {
+});`},{fileName: "interval-padding.ts", fileIndex: 18, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -1033,12 +939,7 @@ export const codes = [
     }
   });
   stackedBarPlot.render();
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 19,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 19, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -1159,12 +1060,7 @@ export const codes = [
     }
   });
   barPlot.render();
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 20,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 20, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -1217,12 +1113,7 @@ export const codes = [
     }
   });
   barPlot.render();
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 21,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 21, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -1334,12 +1225,7 @@ export const codes = [
     }
   });
   stackedBarPlot.render();
-});`,
-  },
-  {
-    fileName: 'customize-tooltip.ts',
-    fileIndex: 22,
-    code: `(function (global, factory) {
+});`},{fileName: "customize-tooltip.ts", fileIndex: 22, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot", "@antv/util"], factory);
   } else if (typeof exports !== "undefined") {
@@ -1455,12 +1341,7 @@ export const codes = [
     })));
     line.chart.showTooltip(point);
   });
-});`,
-  },
-  {
-    fileName: 'desire-heatmap.ts',
-    fileIndex: 23,
-    code: `(function (global, factory) {
+});`},{fileName: "desire-heatmap.ts", fileIndex: 23, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -1581,12 +1462,7 @@ export const codes = [
       }
     });
   });
-});`,
-  },
-  {
-    fileName: 'line.ts',
-    fileIndex: 24,
-    code: `(function (global, factory) {
+});`},{fileName: "line.ts", fileIndex: 24, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -1967,12 +1843,7 @@ export const codes = [
     });
     plot.render();
   });
-});`,
-  },
-  {
-    fileName: 'pie.ts',
-    fileIndex: 25,
-    code: `(function (global, factory) {
+});`},{fileName: "pie.ts", fileIndex: 25, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2066,12 +1937,7 @@ export const codes = [
     }]
   });
   piePlot.render();
-});`,
-  },
-  {
-    fileName: 'trend-funnel.ts',
-    fileIndex: 26,
-    code: `(function (global, factory) {
+});`},{fileName: "trend-funnel.ts", fileIndex: 26, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot", "insert-css"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2124,12 +1990,7 @@ export const codes = [
     }
   });
   funnelPlot.render();
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 27,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 27, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2199,12 +2060,7 @@ export const codes = [
     }
   });
   columnPlot.render();
-});`,
-  },
-  {
-    fileName: 'color.ts',
-    fileIndex: 28,
-    code: `(function (global, factory) {
+});`},{fileName: "color.ts", fileIndex: 28, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2279,12 +2135,7 @@ export const codes = [
     }
   });
   columnPlot.render();
-});`,
-  },
-  {
-    fileName: 'conversion-tag.ts',
-    fileIndex: 29,
-    code: `(function (global, factory) {
+});`},{fileName: "conversion-tag.ts", fileIndex: 29, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2328,12 +2179,7 @@ export const codes = [
     }
   });
   columnPlot.render();
-});`,
-  },
-  {
-    fileName: 'region-annotation.ts',
-    fileIndex: 30,
-    code: `(function (global, factory) {
+});`},{fileName: "region-annotation.ts", fileIndex: 30, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2422,12 +2268,7 @@ export const codes = [
     }
   });
   columnPlot.render();
-});`,
-  },
-  {
-    fileName: 'scrollbar.ts',
-    fileIndex: 31,
-    code: `(function (global, factory) {
+});`},{fileName: "scrollbar.ts", fileIndex: 31, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2460,12 +2301,7 @@ export const codes = [
     });
     column.render();
   });
-});`,
-  },
-  {
-    fileName: 'slider.ts',
-    fileIndex: 32,
-    code: `(function (global, factory) {
+});`},{fileName: "slider.ts", fileIndex: 32, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2499,12 +2335,7 @@ export const codes = [
     });
     column.render();
   });
-});`,
-  },
-  {
-    fileName: 'width-ratio.ts',
-    fileIndex: 33,
-    code: `(function (global, factory) {
+});`},{fileName: "width-ratio.ts", fileIndex: 33, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2565,12 +2396,7 @@ export const codes = [
     }
   });
   columnPlot.render();
-});`,
-  },
-  {
-    fileName: 'width.ts',
-    fileIndex: 34,
-    code: `(function (global, factory) {
+});`},{fileName: "width.ts", fileIndex: 34, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2632,12 +2458,7 @@ export const codes = [
     maxColumnWidth: 20
   });
   columnPlot.render();
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 35,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 35, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2747,12 +2568,7 @@ export const codes = [
     }
   });
   stackedColumnPlot.render();
-});`,
-  },
-  {
-    fileName: 'corner-radius.ts',
-    fileIndex: 36,
-    code: `(function (global, factory) {
+});`},{fileName: "corner-radius.ts", fileIndex: 36, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2782,12 +2598,7 @@ export const codes = [
     });
     column.render();
   });
-});`,
-  },
-  {
-    fileName: 'dodge-padding.ts',
-    fileIndex: 37,
-    code: `(function (global, factory) {
+});`},{fileName: "dodge-padding.ts", fileIndex: 37, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2832,12 +2643,7 @@ export const codes = [
     });
     plot.render();
   });
-});`,
-  },
-  {
-    fileName: 'interval-padding.ts',
-    fileIndex: 38,
-    code: `(function (global, factory) {
+});`},{fileName: "interval-padding.ts", fileIndex: 38, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2884,12 +2690,7 @@ export const codes = [
     });
     plot.render();
   });
-});`,
-  },
-  {
-    fileName: 'stacked.ts',
-    fileIndex: 39,
-    code: `(function (global, factory) {
+});`},{fileName: "stacked.ts", fileIndex: 39, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2918,12 +2719,7 @@ export const codes = [
     });
     column.render();
   });
-});`,
-  },
-  {
-    fileName: 'stacked2.ts',
-    fileIndex: 40,
-    code: `(function (global, factory) {
+});`},{fileName: "stacked2.ts", fileIndex: 40, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -2952,12 +2748,7 @@ export const codes = [
     });
     column.render();
   });
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 41,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 41, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -3075,12 +2866,7 @@ export const codes = [
     }
   });
   columnPlot.render();
-});`,
-  },
-  {
-    fileName: 'interaction.ts',
-    fileIndex: 42,
-    code: `(function (global, factory) {
+});`},{fileName: "interaction.ts", fileIndex: 42, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -3140,12 +2926,7 @@ export const codes = [
     });
     columnPlot.render();
   });
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 43,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 43, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -3198,12 +2979,7 @@ export const codes = [
     }
   });
   barPlot.render();
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 44,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 44, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -3246,12 +3022,7 @@ export const codes = [
     });
     stackedColumnPlot.render();
   });
-});`,
-  },
-  {
-    fileName: 'column-background.ts',
-    fileIndex: 45,
-    code: `(function (global, factory) {
+});`},{fileName: "column-background.ts", fileIndex: 45, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -3292,12 +3063,7 @@ export const codes = [
     });
     stackedColumnPlot.render();
   });
-});`,
-  },
-  {
-    fileName: 'area-with-line-annotation.ts',
-    fileIndex: 46,
-    code: `(function (global, factory) {
+});`},{fileName: "area-with-line-annotation.ts", fileIndex: 46, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -3353,12 +3119,7 @@ export const codes = [
     });
     plot.render();
   });
-});`,
-  },
-  {
-    fileName: 'image-annotation.ts',
-    fileIndex: 47,
-    code: `(function (global, factory) {
+});`},{fileName: "image-annotation.ts", fileIndex: 47, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -3434,12 +3195,7 @@ export const codes = [
     }]
   });
   piePlot.render();
-});`,
-  },
-  {
-    fileName: 'line-annotation.ts',
-    fileIndex: 48,
-    code: `(function (global, factory) {
+});`},{fileName: "line-annotation.ts", fileIndex: 48, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -3530,12 +3286,7 @@ export const codes = [
     });
     line.render();
   });
-});`,
-  },
-  {
-    fileName: 'line-annotation1.ts',
-    fileIndex: 49,
-    code: `(function (global, factory) {
+});`},{fileName: "line-annotation1.ts", fileIndex: 49, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -3614,12 +3365,7 @@ export const codes = [
       }]
     });
   });
-});`,
-  },
-  {
-    fileName: 'region-and-data-marker.ts',
-    fileIndex: 50,
-    code: `(function (global, factory) {
+});`},{fileName: "region-and-data-marker.ts", fileIndex: 50, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -3713,12 +3459,7 @@ export const codes = [
     }]
   });
   line.render();
-});`,
-  },
-  {
-    fileName: 'region-annotation.ts',
-    fileIndex: 51,
-    code: `(function (global, factory) {
+});`},{fileName: "region-annotation.ts", fileIndex: 51, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -3803,12 +3544,7 @@ export const codes = [
     }]
   });
   columnPlot.render();
-});`,
-  },
-  {
-    fileName: 'legend-focus.ts',
-    fileIndex: 52,
-    code: `(function (global, factory) {
+});`},{fileName: "legend-focus.ts", fileIndex: 52, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -3841,12 +3577,7 @@ export const codes = [
     });
     plot.render();
   });
-});`,
-  },
-  {
-    fileName: 'legend-item-value.ts',
-    fileIndex: 53,
-    code: `(function (global, factory) {
+});`},{fileName: "legend-item-value.ts", fileIndex: 53, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -3894,12 +3625,7 @@ export const codes = [
     });
     plot.render();
   });
-});`,
-  },
-  {
-    fileName: 'column-line.ts',
-    fileIndex: 54,
-    code: `(function (global, factory) {
+});`},{fileName: "column-line.ts", fileIndex: 54, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -3949,12 +3675,7 @@ export const codes = [
     }]
   });
   dualAxes.render();
-});`,
-  },
-  {
-    fileName: 'column-multi-line.ts',
-    fileIndex: 55,
-    code: `(function (global, factory) {
+});`},{fileName: "column-multi-line.ts", fileIndex: 55, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -4059,12 +3780,7 @@ export const codes = [
     }]
   });
   dualAxes.render();
-});`,
-  },
-  {
-    fileName: 'custom-column-line.ts',
-    fileIndex: 56,
-    code: `(function (global, factory) {
+});`},{fileName: "custom-column-line.ts", fileIndex: 56, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -4158,12 +3874,7 @@ export const codes = [
     }
   });
   dualAxes.render();
-});`,
-  },
-  {
-    fileName: 'demo-more-1.ts',
-    fileIndex: 57,
-    code: `(function (global, factory) {
+});`},{fileName: "demo-more-1.ts", fileIndex: 57, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -4390,12 +4101,7 @@ export const codes = [
     }
   });
   dualAxes.render();
-});`,
-  },
-  {
-    fileName: 'range-column-line.ts',
-    fileIndex: 58,
-    code: `(function (global, factory) {
+});`},{fileName: "range-column-line.ts", fileIndex: 58, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -4449,12 +4155,7 @@ export const codes = [
     }]
   });
   dualAxes.render();
-});`,
-  },
-  {
-    fileName: 'slider-column-line.ts',
-    fileIndex: 59,
-    code: `(function (global, factory) {
+});`},{fileName: "slider-column-line.ts", fileIndex: 59, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -4611,12 +4312,7 @@ export const codes = [
     }]
   });
   dualAxes.render();
-});`,
-  },
-  {
-    fileName: 'custom-dual-line.ts',
-    fileIndex: 60,
-    code: `(function (global, factory) {
+});`},{fileName: "custom-dual-line.ts", fileIndex: 60, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -4710,12 +4406,7 @@ export const codes = [
     }]
   });
   dualAxes.render();
-});`,
-  },
-  {
-    fileName: 'dual-line.ts',
-    fileIndex: 61,
-    code: `(function (global, factory) {
+});`},{fileName: "dual-line.ts", fileIndex: 61, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -4780,12 +4471,7 @@ export const codes = [
     }]
   });
   dualAxes.render();
-});`,
-  },
-  {
-    fileName: 'dual-multi-line.ts',
-    fileIndex: 62,
-    code: `(function (global, factory) {
+});`},{fileName: "dual-multi-line.ts", fileIndex: 62, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -4921,12 +4607,7 @@ export const codes = [
     }]
   });
   dualAxes.render();
-});`,
-  },
-  {
-    fileName: 'dual-step-line.ts',
-    fileIndex: 63,
-    code: `(function (global, factory) {
+});`},{fileName: "dual-step-line.ts", fileIndex: 63, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -4994,12 +4675,7 @@ export const codes = [
     }]
   });
   dualAxes.render();
-});`,
-  },
-  {
-    fileName: 'custom-grouped-column-line.ts',
-    fileIndex: 64,
-    code: `(function (global, factory) {
+});`},{fileName: "custom-grouped-column-line.ts", fileIndex: 64, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -5123,12 +4799,7 @@ export const codes = [
     }
   });
   dualAxes.render();
-});`,
-  },
-  {
-    fileName: 'grouped-column-line.ts',
-    fileIndex: 65,
-    code: `(function (global, factory) {
+});`},{fileName: "grouped-column-line.ts", fileIndex: 65, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -5216,12 +4887,7 @@ export const codes = [
     }]
   });
   dualAxes.render();
-});`,
-  },
-  {
-    fileName: 'grouped-column-multi-line.ts',
-    fileIndex: 66,
-    code: `(function (global, factory) {
+});`},{fileName: "grouped-column-multi-line.ts", fileIndex: 66, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -5367,12 +5033,7 @@ export const codes = [
     }]
   });
   dualAxes.render();
-});`,
-  },
-  {
-    fileName: 'stacked-grouped-column-line.ts',
-    fileIndex: 67,
-    code: `(function (global, factory) {
+});`},{fileName: "stacked-grouped-column-line.ts", fileIndex: 67, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -5538,12 +5199,7 @@ export const codes = [
     tooltip: false
   });
   dualAxes.render();
-});`,
-  },
-  {
-    fileName: 'custom-stacked-column-line.ts',
-    fileIndex: 68,
-    code: `(function (global, factory) {
+});`},{fileName: "custom-stacked-column-line.ts", fileIndex: 68, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -5665,12 +5321,7 @@ export const codes = [
     theme: 'custom-theme'
   });
   dualAxes.render();
-});`,
-  },
-  {
-    fileName: 'stacked-column-line.ts',
-    fileIndex: 69,
-    code: `(function (global, factory) {
+});`},{fileName: "stacked-column-line.ts", fileIndex: 69, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -5755,12 +5406,7 @@ export const codes = [
     }]
   });
   dualAxes.render();
-});`,
-  },
-  {
-    fileName: 'stacked-column-multi-line.ts',
-    fileIndex: 70,
-    code: `(function (global, factory) {
+});`},{fileName: "stacked-column-multi-line.ts", fileIndex: 70, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -5906,12 +5552,7 @@ export const codes = [
     }]
   });
   dualAxes.render();
-});`,
-  },
-  {
-    fileName: 'stacked-percent-column-line.ts',
-    fileIndex: 71,
-    code: `(function (global, factory) {
+});`},{fileName: "stacked-percent-column-line.ts", fileIndex: 71, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -5997,12 +5638,7 @@ export const codes = [
     }]
   });
   dualAxes.render();
-});`,
-  },
-  {
-    fileName: 'easing-effects.ts',
-    fileIndex: 72,
-    code: `(function (global, factory) {
+});`},{fileName: "easing-effects.ts", fileIndex: 72, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -6076,12 +5712,7 @@ export const codes = [
     plots: plots
   });
   plot.render();
-});`,
-  },
-  {
-    fileName: 'dynamic-area.ts',
-    fileIndex: 73,
-    code: `(function (global, factory) {
+});`},{fileName: "dynamic-area.ts", fileIndex: 73, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -6118,12 +5749,7 @@ export const codes = [
       }
     }, 400);
   });
-});`,
-  },
-  {
-    fileName: 'dynamic-column.ts',
-    fileIndex: 74,
-    code: `(function (global, factory) {
+});`},{fileName: "dynamic-column.ts", fileIndex: 74, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -6189,12 +5815,7 @@ export const codes = [
       };
     }));
   }, 1200);
-});`,
-  },
-  {
-    fileName: 'dynamic-gauge.ts',
-    fileIndex: 75,
-    code: `(function (global, factory) {
+});`},{fileName: "dynamic-gauge.ts", fileIndex: 75, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -6270,12 +5891,7 @@ export const codes = [
       });
     }
   }, 100);
-});`,
-  },
-  {
-    fileName: 'dynamic-pie.ts',
-    fileIndex: 76,
-    code: `(function (global, factory) {
+});`},{fileName: "dynamic-pie.ts", fileIndex: 76, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -6339,12 +5955,7 @@ export const codes = [
       };
     }));
   }, 1200);
-});`,
-  },
-  {
-    fileName: 'dynamic-spline.ts',
-    fileIndex: 77,
-    code: `(function (global, factory) {
+});`},{fileName: "dynamic-spline.ts", fileIndex: 77, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -6397,12 +6008,7 @@ export const codes = [
     });
     line.changeData(newData);
   }, 1000);
-});`,
-  },
-  {
-    fileName: 'circle.ts',
-    fileIndex: 78,
-    code: `(function (global, factory) {
+});`},{fileName: "circle.ts", fileIndex: 78, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -6448,12 +6054,7 @@ export const codes = [
     });
     plot.render();
   });
-});`,
-  },
-  {
-    fileName: 'column.ts',
-    fileIndex: 79,
-    code: `(function (global, factory) {
+});`},{fileName: "column.ts", fileIndex: 79, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -6510,12 +6111,7 @@ export const codes = [
     });
     plot.render();
   });
-});`,
-  },
-  {
-    fileName: 'list.ts',
-    fileIndex: 80,
-    code: `(function (global, factory) {
+});`},{fileName: "list.ts", fileIndex: 80, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -6572,12 +6168,7 @@ export const codes = [
     });
     plot.render();
   });
-});`,
-  },
-  {
-    fileName: 'matrix.ts',
-    fileIndex: 81,
-    code: `(function (global, factory) {
+});`},{fileName: "matrix.ts", fileIndex: 81, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -6656,12 +6247,7 @@ export const codes = [
     });
     plot.render();
   });
-});`,
-  },
-  {
-    fileName: 'mirror.ts',
-    fileIndex: 82,
-    code: `(function (global, factory) {
+});`},{fileName: "mirror.ts", fileIndex: 82, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -6717,12 +6303,7 @@ export const codes = [
     });
     plot.render();
   });
-});`,
-  },
-  {
-    fileName: 'rect.ts',
-    fileIndex: 83,
-    code: `(function (global, factory) {
+});`},{fileName: "rect.ts", fileIndex: 83, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -6780,12 +6361,7 @@ export const codes = [
     });
     plot.render();
   });
-});`,
-  },
-  {
-    fileName: 'tree-column.ts',
-    fileIndex: 84,
-    code: `(function (global, factory) {
+});`},{fileName: "tree-column.ts", fileIndex: 84, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot", "@antv/data-set"], factory);
   } else if (typeof exports !== "undefined") {
@@ -6903,12 +6479,7 @@ export const codes = [
     });
     plot.render();
   });
-});`,
-  },
-  {
-    fileName: 'tree.ts',
-    fileIndex: 85,
-    code: `(function (global, factory) {
+});`},{fileName: "tree.ts", fileIndex: 85, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot", "@antv/data-set"], factory);
   } else if (typeof exports !== "undefined") {
@@ -7036,12 +6607,7 @@ export const codes = [
     }
   });
   plot.render();
-});`,
-  },
-  {
-    fileName: 'conversion-tag-with-link.ts',
-    fileIndex: 86,
-    code: `(function (global, factory) {
+});`},{fileName: "conversion-tag-with-link.ts", fileIndex: 86, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -7126,12 +6692,7 @@ export const codes = [
       window.open(link);
     }
   });
-});`,
-  },
-  {
-    fileName: 'custom-state-style.ts',
-    fileIndex: 87,
-    code: `(function (global, factory) {
+});`},{fileName: "custom-state-style.ts", fileIndex: 87, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -7191,12 +6752,7 @@ export const codes = [
     }]
   });
   piePlot.render();
-});`,
-  },
-  {
-    fileName: 'set-state.ts',
-    fileIndex: 88,
-    code: `(function (global, factory) {
+});`},{fileName: "set-state.ts", fileIndex: 88, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -7259,12 +6815,7 @@ export const codes = [
   piePlot.setState('selected', function (data) {
     return data.type === '分类一' || data.type === '分类二';
   });
-});`,
-  },
-  {
-    fileName: 'custom-theme.ts',
-    fileIndex: 89,
-    code: `(function (global, factory) {
+});`},{fileName: "custom-theme.ts", fileIndex: 89, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot", "@antv/util"], factory);
   } else if (typeof exports !== "undefined") {
@@ -7320,12 +6871,7 @@ export const codes = [
     });
     column.render();
   });
-});`,
-  },
-  {
-    fileName: 'dark.ts',
-    fileIndex: 90,
-    code: `(function (global, factory) {
+});`},{fileName: "dark.ts", fileIndex: 90, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -7406,12 +6952,7 @@ export const codes = [
     }
   });
   piePlot.render();
-});`,
-  },
-  {
-    fileName: 'register-theme.ts',
-    fileIndex: 91,
-    code: `(function (global, factory) {
+});`},{fileName: "register-theme.ts", fileIndex: 91, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -7467,12 +7008,7 @@ export const codes = [
     theme: 'custom-theme'
   });
   piePlot.render();
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 92,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 92, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -7507,12 +7043,7 @@ export const codes = [
     });
     heatmapPlot.render();
   });
-});`,
-  },
-  {
-    fileName: 'calendar.ts',
-    fileIndex: 93,
-    code: `(function (global, factory) {
+});`},{fileName: "calendar.ts", fileIndex: 93, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -7640,12 +7171,7 @@ export const codes = [
     });
     heatmapPlot.render();
   });
-});`,
-  },
-  {
-    fileName: 'polar.ts',
-    fileIndex: 94,
-    code: `(function (global, factory) {
+});`},{fileName: "polar.ts", fileIndex: 94, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -7728,12 +7254,7 @@ export const codes = [
     });
     heatmapPlot.render();
   });
-});`,
-  },
-  {
-    fileName: 'shape.ts',
-    fileIndex: 95,
-    code: `(function (global, factory) {
+});`},{fileName: "shape.ts", fileIndex: 95, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -7769,12 +7290,7 @@ export const codes = [
     });
     heatmapPlot.render();
   });
-});`,
-  },
-  {
-    fileName: 'size.ts',
-    fileIndex: 96,
-    code: `(function (global, factory) {
+});`},{fileName: "size.ts", fileIndex: 96, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -7810,12 +7326,7 @@ export const codes = [
     });
     heatmapPlot.render();
   });
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 97,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 97, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -7852,12 +7363,7 @@ export const codes = [
     });
     heatmapPlot.render();
   });
-});`,
-  },
-  {
-    fileName: 'line-annotation.ts',
-    fileIndex: 98,
-    code: `(function (global, factory) {
+});`},{fileName: "line-annotation.ts", fileIndex: 98, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -7906,12 +7412,7 @@ export const codes = [
     });
     line.render();
   });
-});`,
-  },
-  {
-    fileName: 'line-point-style.ts',
-    fileIndex: 99,
-    code: `(function (global, factory) {
+});`},{fileName: "line-point-style.ts", fileIndex: 99, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -7985,12 +7486,7 @@ export const codes = [
     }]
   });
   line.render();
-});`,
-  },
-  {
-    fileName: 'line-slider.ts',
-    fileIndex: 100,
-    code: `(function (global, factory) {
+});`},{fileName: "line-slider.ts", fileIndex: 100, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -8023,12 +7519,7 @@ export const codes = [
     });
     line.render();
   });
-});`,
-  },
-  {
-    fileName: 'line-with-data-marker.ts',
-    fileIndex: 101,
-    code: `(function (global, factory) {
+});`},{fileName: "line-with-data-marker.ts", fileIndex: 101, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -8157,12 +7648,7 @@ export const codes = [
     });
     plot.render();
   });
-});`,
-  },
-  {
-    fileName: 'line.ts',
-    fileIndex: 102,
-    code: `(function (global, factory) {
+});`},{fileName: "line.ts", fileIndex: 102, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -8192,12 +7678,7 @@ export const codes = [
     });
     line.render();
   });
-});`,
-  },
-  {
-    fileName: 'spline.ts',
-    fileIndex: 103,
-    code: `(function (global, factory) {
+});`},{fileName: "spline.ts", fileIndex: 103, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -8228,12 +7709,7 @@ export const codes = [
     });
     line.render();
   });
-});`,
-  },
-  {
-    fileName: 'line-color.ts',
-    fileIndex: 104,
-    code: `(function (global, factory) {
+});`},{fileName: "line-color.ts", fileIndex: 104, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -8270,12 +7746,7 @@ export const codes = [
     });
     line.render();
   });
-});`,
-  },
-  {
-    fileName: 'line-grid.ts',
-    fileIndex: 105,
-    code: `(function (global, factory) {
+});`},{fileName: "line-grid.ts", fileIndex: 105, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -8487,12 +7958,7 @@ export const codes = [
     });
     line.render();
   });
-});`,
-  },
-  {
-    fileName: 'line-label.ts',
-    fileIndex: 106,
-    code: `(function (global, factory) {
+});`},{fileName: "line-label.ts", fileIndex: 106, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -8536,12 +8002,7 @@ export const codes = [
     });
     linePlot.render();
   });
-});`,
-  },
-  {
-    fileName: 'line-large-data.ts',
-    fileIndex: 107,
-    code: `(function (global, factory) {
+});`},{fileName: "line-large-data.ts", fileIndex: 107, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -8580,12 +8041,7 @@ export const codes = [
     });
     line.render();
   });
-});`,
-  },
-  {
-    fileName: 'marker-active.ts',
-    fileIndex: 108,
-    code: `(function (global, factory) {
+});`},{fileName: "marker-active.ts", fileIndex: 108, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -8637,12 +8093,7 @@ export const codes = [
     });
     line.render();
   });
-});`,
-  },
-  {
-    fileName: 'style-callback.ts',
-    fileIndex: 109,
-    code: `(function (global, factory) {
+});`},{fileName: "style-callback.ts", fileIndex: 109, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -8696,12 +8147,7 @@ export const codes = [
     });
     line.render();
   });
-});`,
-  },
-  {
-    fileName: 'line-multiple.ts',
-    fileIndex: 110,
-    code: `(function (global, factory) {
+});`},{fileName: "line-multiple.ts", fileIndex: 110, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -8822,12 +8268,7 @@ export const codes = [
     stepType: 'hvh'
   });
   line.render();
-});`,
-  },
-  {
-    fileName: 'line.ts',
-    fileIndex: 111,
-    code: `(function (global, factory) {
+});`},{fileName: "line.ts", fileIndex: 111, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -8880,12 +8321,7 @@ export const codes = [
     stepType: 'vh'
   });
   linePlot.render();
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 112,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 112, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["exports", "@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -8958,12 +8394,7 @@ export const codes = [
     }
   });
   BidirectionalBarPlot.render();
-});`,
-  },
-  {
-    fileName: 'layout.ts',
-    fileIndex: 113,
-    code: `(function (global, factory) {
+});`},{fileName: "layout.ts", fileIndex: 113, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["exports", "@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -9040,12 +8471,7 @@ export const codes = [
     }
   });
   BidirectionalBarPlot.render();
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 114,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 114, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -9131,12 +8557,7 @@ export const codes = [
     animation: false
   });
   boxPlot.render();
-});`,
-  },
-  {
-    fileName: 'group.ts',
-    fileIndex: 115,
-    code: `(function (global, factory) {
+});`},{fileName: "group.ts", fileIndex: 115, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -9219,12 +8640,7 @@ export const codes = [
     groupField: 'Species'
   });
   groupBoxPlot.render();
-});`,
-  },
-  {
-    fileName: 'outliers.ts',
-    fileIndex: 116,
-    code: `(function (global, factory) {
+});`},{fileName: "outliers.ts", fileIndex: 116, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -9314,12 +8730,7 @@ export const codes = [
     }
   });
   outliersBoxPlot.render();
-});`,
-  },
-  {
-    fileName: 'basic-transpose.ts',
-    fileIndex: 117,
-    code: `(function (global, factory) {
+});`},{fileName: "basic-transpose.ts", fileIndex: 117, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -9378,12 +8789,7 @@ export const codes = [
     }
   });
   funnelPlot.render();
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 118,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 118, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -9421,12 +8827,7 @@ export const codes = [
     legend: false
   });
   funnelPlot.render();
-});`,
-  },
-  {
-    fileName: 'compare-transpose.ts',
-    fileIndex: 119,
-    code: `(function (global, factory) {
+});`},{fileName: "compare-transpose.ts", fileIndex: 119, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -9498,12 +8899,7 @@ export const codes = [
     legend: false
   });
   funnelPlot.render();
-});`,
-  },
-  {
-    fileName: 'compare.ts',
-    fileIndex: 120,
-    code: `(function (global, factory) {
+});`},{fileName: "compare.ts", fileIndex: 120, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -9587,12 +8983,7 @@ export const codes = [
     legend: false
   });
   funnelPlot.render();
-});`,
-  },
-  {
-    fileName: 'dynamic-height-transpose.ts',
-    fileIndex: 121,
-    code: `(function (global, factory) {
+});`},{fileName: "dynamic-height-transpose.ts", fileIndex: 121, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -9632,12 +9023,7 @@ export const codes = [
     legend: false
   });
   funnelPlot.render();
-});`,
-  },
-  {
-    fileName: 'dynamic-height.ts',
-    fileIndex: 122,
-    code: `(function (global, factory) {
+});`},{fileName: "dynamic-height.ts", fileIndex: 122, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -9676,12 +9062,7 @@ export const codes = [
     legend: false
   });
   funnelPlot.render();
-});`,
-  },
-  {
-    fileName: 'facet-transpose.ts',
-    fileIndex: 123,
-    code: `(function (global, factory) {
+});`},{fileName: "facet-transpose.ts", fileIndex: 123, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -9757,12 +9138,7 @@ export const codes = [
     legend: false
   });
   funnelPlot.render();
-});`,
-  },
-  {
-    fileName: 'facet.ts',
-    fileIndex: 124,
-    code: `(function (global, factory) {
+});`},{fileName: "facet.ts", fileIndex: 124, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -9837,12 +9213,7 @@ export const codes = [
     legend: false
   });
   funnelPlot.render();
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 125,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 125, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -9867,12 +9238,7 @@ export const codes = [
     });
     histogramPlot.render();
   });
-});`,
-  },
-  {
-    fileName: 'binWidth.ts',
-    fileIndex: 126,
-    code: `(function (global, factory) {
+});`},{fileName: "binWidth.ts", fileIndex: 126, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -10021,12 +9387,7 @@ export const codes = [
     }
   });
   histogramPlot.render();
-});`,
-  },
-  {
-    fileName: 'stack.ts',
-    fileIndex: 127,
-    code: `(function (global, factory) {
+});`},{fileName: "stack.ts", fileIndex: 127, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -10060,12 +9421,7 @@ export const codes = [
     });
     histogramPlot.render();
   });
-});`,
-  },
-  {
-    fileName: 'area-alternate-grid.ts',
-    fileIndex: 128,
-    code: `(function (global, factory) {
+});`},{fileName: "area-alternate-grid.ts", fileIndex: 128, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -10128,12 +9484,7 @@ export const codes = [
     });
     radarPlot.render();
   });
-});`,
-  },
-  {
-    fileName: 'area-grid.ts',
-    fileIndex: 129,
-    code: `(function (global, factory) {
+});`},{fileName: "area-grid.ts", fileIndex: 129, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -10195,12 +9546,7 @@ export const codes = [
     });
     radarPlot.render();
   });
-});`,
-  },
-  {
-    fileName: 'area.ts',
-    fileIndex: 130,
-    code: `(function (global, factory) {
+});`},{fileName: "area.ts", fileIndex: 130, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -10250,12 +9596,7 @@ export const codes = [
     });
     radarPlot.render();
   });
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 131,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 131, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -10328,12 +9669,7 @@ export const codes = [
     area: {}
   });
   radarPlot.render();
-});`,
-  },
-  {
-    fileName: 'line-alternate-grid.ts',
-    fileIndex: 132,
-    code: `(function (global, factory) {
+});`},{fileName: "line-alternate-grid.ts", fileIndex: 132, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -10394,12 +9730,7 @@ export const codes = [
     });
     radarPlot.render();
   });
-});`,
-  },
-  {
-    fileName: 'line-grid.ts',
-    fileIndex: 133,
-    code: `(function (global, factory) {
+});`},{fileName: "line-grid.ts", fileIndex: 133, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -10459,12 +9790,7 @@ export const codes = [
     });
     radarPlot.render();
   });
-});`,
-  },
-  {
-    fileName: 'line.ts',
-    fileIndex: 134,
-    code: `(function (global, factory) {
+});`},{fileName: "line.ts", fileIndex: 134, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -10512,12 +9838,7 @@ export const codes = [
     });
     radarPlot.render();
   });
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 135,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 135, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -10574,12 +9895,7 @@ export const codes = [
     }
   });
   bar.render();
-});`,
-  },
-  {
-    fileName: 'color.ts',
-    fileIndex: 136,
-    code: `(function (global, factory) {
+});`},{fileName: "color.ts", fileIndex: 136, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -10649,12 +9965,7 @@ export const codes = [
     }
   });
   bar.render();
-});`,
-  },
-  {
-    fileName: 'line.ts',
-    fileIndex: 137,
-    code: `(function (global, factory) {
+});`},{fileName: "line.ts", fileIndex: 137, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -10724,12 +10035,7 @@ export const codes = [
     }]
   });
   bar.render();
-});`,
-  },
-  {
-    fileName: 'round-corner.ts',
-    fileIndex: 138,
-    code: `(function (global, factory) {
+});`},{fileName: "round-corner.ts", fileIndex: 138, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -10782,12 +10088,7 @@ export const codes = [
     }
   });
   bar.render();
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 139,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 139, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -11009,12 +10310,7 @@ export const codes = [
     yField: ['open', 'close', 'high', 'low']
   });
   stockPlot.render();
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 140,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 140, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -11043,12 +10339,7 @@ export const codes = [
     });
     sunburstPlot.render();
   });
-});`,
-  },
-  {
-    fileName: 'reflect.ts',
-    fileIndex: 141,
-    code: `(function (global, factory) {
+});`},{fileName: "reflect.ts", fileIndex: 141, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -11092,12 +10383,7 @@ export const codes = [
     });
     sunburstPlot.render();
   });
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 142,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 142, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -11181,12 +10467,7 @@ export const codes = [
     colorField: 'name'
   });
   treemapPlot.render();
-});`,
-  },
-  {
-    fileName: 'drill-down.ts',
-    fileIndex: 143,
-    code: `(function (global, factory) {
+});`},{fileName: "drill-down.ts", fileIndex: 143, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot", "@antv/util"], factory);
   } else if (typeof exports !== "undefined") {
@@ -11240,12 +10521,7 @@ export const codes = [
     });
     treemapPlot.render();
   });
-});`,
-  },
-  {
-    fileName: 'treemap-nest.ts',
-    fileIndex: 144,
-    code: `(function (global, factory) {
+});`},{fileName: "treemap-nest.ts", fileIndex: 144, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot", "insert-css"], factory);
   } else if (typeof exports !== "undefined") {
@@ -11295,12 +10571,7 @@ export const codes = [
     });
     treemapPlot.render();
   });
-});`,
-  },
-  {
-    fileName: 'absolute-label.ts',
-    fileIndex: 145,
-    code: `(function (global, factory) {
+});`},{fileName: "absolute-label.ts", fileIndex: 145, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -11394,12 +10665,7 @@ export const codes = [
     }
   });
   waterfallPlot.render();
-});`,
-  },
-  {
-    fileName: 'annotation.ts',
-    fileIndex: 146,
-    code: `(function (global, factory) {
+});`},{fileName: "annotation.ts", fileIndex: 146, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -11487,12 +10753,7 @@ export const codes = [
     annotations: annotations
   });
   waterfallPlot.render();
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 147,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 147, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -11562,12 +10823,7 @@ export const codes = [
     }
   });
   waterfallPlot.render();
-});`,
-  },
-  {
-    fileName: 'custom-color.ts',
-    fileIndex: 148,
-    code: `(function (global, factory) {
+});`},{fileName: "custom-color.ts", fileIndex: 148, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -11712,12 +10968,7 @@ export const codes = [
     }
   });
   waterfallPlot.render();
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 149,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 149, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -11759,12 +11010,7 @@ export const codes = [
     });
     wordCloud.render();
   });
-});`,
-  },
-  {
-    fileName: 'color-field.ts',
-    fileIndex: 150,
-    code: `(function (global, factory) {
+});`},{fileName: "color-field.ts", fileIndex: 150, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -11795,12 +11041,7 @@ export const codes = [
     });
     wordCloud.render();
   });
-});`,
-  },
-  {
-    fileName: 'douban-2020-movie.ts',
-    fileIndex: 151,
-    code: `(function (global, factory) {
+});`},{fileName: "douban-2020-movie.ts", fileIndex: 151, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -11841,12 +11082,7 @@ export const codes = [
     });
     wordCloud.render();
   });
-});`,
-  },
-  {
-    fileName: 'image-mask-base64.ts',
-    fileIndex: 152,
-    code: `(function (global, factory) {
+});`},{fileName: "image-mask-base64.ts", fileIndex: 152, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -11877,12 +11113,7 @@ export const codes = [
     });
     wordCloud.render();
   });
-});`,
-  },
-  {
-    fileName: 'image-mask.ts',
-    fileIndex: 153,
-    code: `(function (global, factory) {
+});`},{fileName: "image-mask.ts", fileIndex: 153, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -11913,12 +11144,7 @@ export const codes = [
     });
     wordCloud.render();
   });
-});`,
-  },
-  {
-    fileName: 'placement-strategy.ts',
-    fileIndex: 154,
-    code: `(function (global, factory) {
+});`},{fileName: "placement-strategy.ts", fileIndex: 154, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -11960,12 +11186,7 @@ export const codes = [
     }
   });
   wordCloud.render();
-});`,
-  },
-  {
-    fileName: 'same-place.ts',
-    fileIndex: 155,
-    code: `(function (global, factory) {
+});`},{fileName: "same-place.ts", fileIndex: 155, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -12001,12 +11222,7 @@ export const codes = [
     });
     wordCloud.render();
   });
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 156,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 156, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -12063,12 +11279,7 @@ export const codes = [
     }]
   });
   piePlot.render();
-});`,
-  },
-  {
-    fileName: 'legend-interaction.ts',
-    fileIndex: 157,
-    code: `(function (global, factory) {
+});`},{fileName: "legend-interaction.ts", fileIndex: 157, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -12119,12 +11330,7 @@ export const codes = [
     }]
   });
   piePlot.render();
-});`,
-  },
-  {
-    fileName: 'outer-label.ts',
-    fileIndex: 158,
-    code: `(function (global, factory) {
+});`},{fileName: "outer-label.ts", fileIndex: 158, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -12172,12 +11378,7 @@ export const codes = [
     }]
   });
   piePlot.render();
-});`,
-  },
-  {
-    fileName: 'pie-texture.ts',
-    fileIndex: 159,
-    code: `(function (global, factory) {
+});`},{fileName: "pie-texture.ts", fileIndex: 159, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -12234,12 +11435,7 @@ export const codes = [
     }]
   });
   piePlot.render();
-});`,
-  },
-  {
-    fileName: 'quarter-circle.ts',
-    fileIndex: 160,
-    code: `(function (global, factory) {
+});`},{fileName: "quarter-circle.ts", fileIndex: 160, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -12298,12 +11494,7 @@ export const codes = [
     }
   });
   piePlot.render();
-});`,
-  },
-  {
-    fileName: 'spider-label.ts',
-    fileIndex: 161,
-    code: `(function (global, factory) {
+});`},{fileName: "spider-label.ts", fileIndex: 161, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -12355,12 +11546,7 @@ export const codes = [
     }]
   });
   piePlot.render();
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 162,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 162, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -12430,12 +11616,7 @@ export const codes = [
     }
   });
   piePlot.render();
-});`,
-  },
-  {
-    fileName: 'association-filter.ts',
-    fileIndex: 163,
-    code: `(function (global, factory) {
+});`},{fileName: "association-filter.ts", fileIndex: 163, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -12558,12 +11739,7 @@ export const codes = [
     });
     plot.render();
   });
-});`,
-  },
-  {
-    fileName: 'association-highlight.ts',
-    fileIndex: 164,
-    code: `(function (global, factory) {
+});`},{fileName: "association-highlight.ts", fileIndex: 164, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -12702,12 +11878,7 @@ export const codes = [
     });
     plot.render();
   });
-});`,
-  },
-  {
-    fileName: 'association-line.ts',
-    fileIndex: 165,
-    code: `(function (global, factory) {
+});`},{fileName: "association-line.ts", fileIndex: 165, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot", "@antv/util"], factory);
   } else if (typeof exports !== "undefined") {
@@ -12934,12 +12105,7 @@ export const codes = [
     });
     plot.render();
   });
-});`,
-  },
-  {
-    fileName: 'association-pie.ts',
-    fileIndex: 166,
-    code: `(function (global, factory) {
+});`},{fileName: "association-pie.ts", fileIndex: 166, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -13027,12 +12193,7 @@ export const codes = [
     });
     plot.render();
   });
-});`,
-  },
-  {
-    fileName: 'hill-column.ts',
-    fileIndex: 167,
-    code: `(function (global, factory) {
+});`},{fileName: "hill-column.ts", fileIndex: 167, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/util", "@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -13141,12 +12302,7 @@ export const codes = [
   }, adaptor, defaultOptions); // 引入上述的封装，或者降上述代码发包
 
   hill.render();
-});`,
-  },
-  {
-    fileName: 'brush-filter-record.ts',
-    fileIndex: 168,
-    code: `(function (global, factory) {
+});`},{fileName: "brush-filter-record.ts", fileIndex: 168, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -13282,12 +12438,7 @@ export const codes = [
     });
     plot.render();
   });
-});`,
-  },
-  {
-    fileName: 'combo-plot.ts',
-    fileIndex: 169,
-    code: `(function (global, factory) {
+});`},{fileName: "combo-plot.ts", fileIndex: 169, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -13462,12 +12613,7 @@ export const codes = [
     }]
   });
   plot.render();
-});`,
-  },
-  {
-    fileName: 'drinks.ts',
-    fileIndex: 170,
-    code: `(function (global, factory) {
+});`},{fileName: "drinks.ts", fileIndex: 170, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/data-set", "@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -13675,12 +12821,7 @@ export const codes = [
     }]
   });
   plot.render();
-});`,
-  },
-  {
-    fileName: 'range-area.ts',
-    fileIndex: 171,
-    code: `(function (global, factory) {
+});`},{fileName: "range-area.ts", fileIndex: 171, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -13771,12 +12912,7 @@ export const codes = [
 
     rangeAreaPlot.render();
   });
-});`,
-  },
-  {
-    fileName: 'sales-analysis.ts',
-    fileIndex: 172,
-    code: `(function (global, factory) {
+});`},{fileName: "sales-analysis.ts", fileIndex: 172, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/util", "@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -13897,12 +13033,7 @@ export const codes = [
     legend: {}
   });
   plot.render();
-});`,
-  },
-  {
-    fileName: 'series-columns.ts',
-    fileIndex: 173,
-    code: `(function (global, factory) {
+});`},{fileName: "series-columns.ts", fileIndex: 173, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -14195,12 +13326,7 @@ export const codes = [
   }); // Step 3: 渲染图表
 
   plot.render();
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 174,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 174, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -14271,12 +13397,7 @@ export const codes = [
     }
   });
   bulletPlot.render();
-});`,
-  },
-  {
-    fileName: 'color.ts',
-    fileIndex: 175,
-    code: `(function (global, factory) {
+});`},{fileName: "color.ts", fileIndex: 175, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -14373,12 +13494,7 @@ export const codes = [
     }
   });
   bulletPlot.render();
-});`,
-  },
-  {
-    fileName: 'grouped.ts',
-    fileIndex: 176,
-    code: `(function (global, factory) {
+});`},{fileName: "grouped.ts", fileIndex: 176, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -14495,12 +13611,7 @@ export const codes = [
     }
   });
   bulletPlot.render();
-});`,
-  },
-  {
-    fileName: 'layout.ts',
-    fileIndex: 177,
-    code: `(function (global, factory) {
+});`},{fileName: "layout.ts", fileIndex: 177, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -14574,12 +13685,7 @@ export const codes = [
     }
   });
   bulletPlot.render();
-});`,
-  },
-  {
-    fileName: 'stacked.ts',
-    fileIndex: 178,
-    code: `(function (global, factory) {
+});`},{fileName: "stacked.ts", fileIndex: 178, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -14695,12 +13801,7 @@ export const codes = [
     }
   });
   bulletPlot.render();
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 179,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 179, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -14756,12 +13857,7 @@ export const codes = [
     }
   });
   gauge.render();
-});`,
-  },
-  {
-    fileName: 'complex.ts',
-    fileIndex: 180,
-    code: `(function (global, factory) {
+});`},{fileName: "complex.ts", fileIndex: 180, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -14842,12 +13938,7 @@ export const codes = [
     data += 0.005;
     gauge.changeData(data > 1 ? data - 1 : data);
   }, 100);
-});`,
-  },
-  {
-    fileName: 'custom-color.ts',
-    fileIndex: 181,
-    code: `(function (global, factory) {
+});`},{fileName: "custom-color.ts", fileIndex: 181, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -14890,12 +13981,7 @@ export const codes = [
     }
   });
   gauge.render();
-});`,
-  },
-  {
-    fileName: 'custom-meter-step.ts',
-    fileIndex: 182,
-    code: `(function (global, factory) {
+});`},{fileName: "custom-meter-step.ts", fileIndex: 182, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -14983,12 +14069,7 @@ export const codes = [
     data += 0.005;
     gauge.changeData(data > 1 ? data - 1 : data);
   }, 100);
-});`,
-  },
-  {
-    fileName: 'meter-gauge.ts',
-    fileIndex: 183,
-    code: `(function (global, factory) {
+});`},{fileName: "meter-gauge.ts", fileIndex: 183, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -15033,12 +14114,7 @@ export const codes = [
     }
   });
   gauge.render();
-});`,
-  },
-  {
-    fileName: 'range-width.ts',
-    fileIndex: 184,
-    code: `(function (global, factory) {
+});`},{fileName: "range-width.ts", fileIndex: 184, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -15088,12 +14164,7 @@ export const codes = [
     }
   });
   gauge.render();
-});`,
-  },
-  {
-    fileName: 'single-gradient.ts',
-    fileIndex: 185,
-    code: `(function (global, factory) {
+});`},{fileName: "single-gradient.ts", fileIndex: 185, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -15140,12 +14211,7 @@ export const codes = [
     }
   });
   gauge.render();
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 186,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 186, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -15171,12 +14237,7 @@ export const codes = [
     }
   });
   liquidPlot.render();
-});`,
-  },
-  {
-    fileName: 'custom.ts',
-    fileIndex: 187,
-    code: `(function (global, factory) {
+});`},{fileName: "custom.ts", fileIndex: 187, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -15208,12 +14269,7 @@ export const codes = [
     }
   });
   liquidPlot.render();
-});`,
-  },
-  {
-    fileName: 'diamond.ts',
-    fileIndex: 188,
-    code: `(function (global, factory) {
+});`},{fileName: "diamond.ts", fileIndex: 188, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -15240,12 +14296,7 @@ export const codes = [
     }
   });
   liquidPlot.render();
-});`,
-  },
-  {
-    fileName: 'outline-style.ts',
-    fileIndex: 189,
-    code: `(function (global, factory) {
+});`},{fileName: "outline-style.ts", fileIndex: 189, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -15292,12 +14343,7 @@ export const codes = [
     }
   });
   liquidPlot.render();
-});`,
-  },
-  {
-    fileName: 'rect.ts',
-    fileIndex: 190,
-    code: `(function (global, factory) {
+});`},{fileName: "rect.ts", fileIndex: 190, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -15324,12 +14370,7 @@ export const codes = [
     }
   });
   liquidPlot.render();
-});`,
-  },
-  {
-    fileName: 'chord-population.ts',
-    fileIndex: 191,
-    code: `(function (global, factory) {
+});`},{fileName: "chord-population.ts", fileIndex: 191, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -15404,12 +14445,7 @@ export const codes = [
     weightField: 'value'
   });
   chord.render();
-});`,
-  },
-  {
-    fileName: 'alipay.ts',
-    fileIndex: 192,
-    code: `(function (global, factory) {
+});`},{fileName: "alipay.ts", fileIndex: 192, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -15490,12 +14526,7 @@ export const codes = [
     nodePaddingRatio: 0.03
   });
   sankey.render();
-});`,
-  },
-  {
-    fileName: 'draggable.ts',
-    fileIndex: 193,
-    code: `(function (global, factory) {
+});`},{fileName: "draggable.ts", fileIndex: 193, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -15557,12 +14588,7 @@ export const codes = [
     });
     sankey.render();
   });
-});`,
-  },
-  {
-    fileName: 'energy.ts',
-    fileIndex: 194,
-    code: `(function (global, factory) {
+});`},{fileName: "energy.ts", fileIndex: 194, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -15593,12 +14619,7 @@ export const codes = [
     });
     sankey.render();
   });
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 195,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 195, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -15643,12 +14664,7 @@ export const codes = [
     }
   });
   rosePlot.render();
-});`,
-  },
-  {
-    fileName: 'inner-label.ts',
-    fileIndex: 196,
-    code: `(function (global, factory) {
+});`},{fileName: "inner-label.ts", fileIndex: 196, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -15693,12 +14709,7 @@ export const codes = [
     }
   });
   rosePlot.render();
-});`,
-  },
-  {
-    fileName: 'interaction.ts',
-    fileIndex: 197,
-    code: `(function (global, factory) {
+});`},{fileName: "interaction.ts", fileIndex: 197, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -15746,12 +14757,7 @@ export const codes = [
     }]
   });
   rosePlot.render();
-});`,
-  },
-  {
-    fileName: 'rose-state.ts',
-    fileIndex: 198,
-    code: `(function (global, factory) {
+});`},{fileName: "rose-state.ts", fileIndex: 198, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -15808,12 +14814,7 @@ export const codes = [
     }]
   });
   rosePlot.render();
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 199,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 199, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -15894,12 +14895,7 @@ export const codes = [
     }]
   });
   rosePlot.render();
-});`,
-  },
-  {
-    fileName: 'basic.ts',
-    fileIndex: 200,
-    code: `(function (global, factory) {
+});`},{fileName: "basic.ts", fileIndex: 200, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -15980,12 +14976,7 @@ export const codes = [
     }]
   });
   rosePlot.render();
-});`,
-  },
-  {
-    fileName: 'axis-right.ts',
-    fileIndex: 201,
-    code: `(function (global, factory) {
+});`},{fileName: "axis-right.ts", fileIndex: 201, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -16106,12 +15097,7 @@ export const codes = [
     });
     scatterPlot.render();
   });
-});`,
-  },
-  {
-    fileName: 'bubble-3d.ts',
-    fileIndex: 202,
-    code: `(function (global, factory) {
+});`},{fileName: "bubble-3d.ts", fileIndex: 202, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -16164,12 +15150,7 @@ export const codes = [
     });
     scatterPlot.render();
   });
-});`,
-  },
-  {
-    fileName: 'quadrant.ts',
-    fileIndex: 203,
-    code: `(function (global, factory) {
+});`},{fileName: "quadrant.ts", fileIndex: 203, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -16240,12 +15221,7 @@ export const codes = [
     });
     scatterPlot.render();
   });
-});`,
-  },
-  {
-    fileName: 'color-mapping.ts',
-    fileIndex: 204,
-    code: `(function (global, factory) {
+});`},{fileName: "color-mapping.ts", fileIndex: 204, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -16297,12 +15273,7 @@ export const codes = [
     });
     scatterPlot.render();
   });
-});`,
-  },
-  {
-    fileName: 'custom-shape.ts',
-    fileIndex: 205,
-    code: `(function (global, factory) {
+});`},{fileName: "custom-shape.ts", fileIndex: 205, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -16376,12 +15347,7 @@ export const codes = [
     });
     scatterPlot.render();
   });
-});`,
-  },
-  {
-    fileName: 'label.ts',
-    fileIndex: 206,
-    code: `(function (global, factory) {
+});`},{fileName: "label.ts", fileIndex: 206, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -16436,12 +15402,7 @@ export const codes = [
     });
     scatterPlot.render();
   });
-});`,
-  },
-  {
-    fileName: 'line.ts',
-    fileIndex: 207,
-    code: `(function (global, factory) {
+});`},{fileName: "line.ts", fileIndex: 207, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -16566,12 +15527,7 @@ export const codes = [
     }
   });
   scatterPlot.render();
-});`,
-  },
-  {
-    fileName: 'mapping-color-and-shape.ts',
-    fileIndex: 208,
-    code: `(function (global, factory) {
+});`},{fileName: "mapping-color-and-shape.ts", fileIndex: 208, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot", "@antv/util"], factory);
   } else if (typeof exports !== "undefined") {
@@ -16632,12 +15588,7 @@ export const codes = [
       }
     });
   });
-});`,
-  },
-  {
-    fileName: 'progress-style.ts',
-    fileIndex: 209,
-    code: `(function (global, factory) {
+});`},{fileName: "progress-style.ts", fileIndex: 209, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -16661,12 +15612,7 @@ export const codes = [
     color: ['#F4664A', '#E8EDF3']
   });
   progress.render();
-});`,
-  },
-  {
-    fileName: 'progress.ts',
-    fileIndex: 210,
-    code: `(function (global, factory) {
+});`},{fileName: "progress.ts", fileIndex: 210, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -16689,12 +15635,7 @@ export const codes = [
     color: ['#5B8FF9', '#E8EDF3']
   });
   progress.render();
-});`,
-  },
-  {
-    fileName: 'ring-progress-style.ts',
-    fileIndex: 211,
-    code: `(function (global, factory) {
+});`},{fileName: "ring-progress-style.ts", fileIndex: 211, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -16731,12 +15672,7 @@ export const codes = [
     }
   });
   ringProgress.render();
-});`,
-  },
-  {
-    fileName: 'ring-progress.ts',
-    fileIndex: 212,
-    code: `(function (global, factory) {
+});`},{fileName: "ring-progress.ts", fileIndex: 212, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -16759,12 +15695,7 @@ export const codes = [
     color: ['#5B8FF9', '#E8EDF3']
   });
   ringProgress.render();
-});`,
-  },
-  {
-    fileName: 'area-annotation.ts',
-    fileIndex: 213,
-    code: `(function (global, factory) {
+});`},{fileName: "area-annotation.ts", fileIndex: 213, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -16825,12 +15756,7 @@ export const codes = [
     }]
   });
   tinyArea.render();
-});`,
-  },
-  {
-    fileName: 'basic-area.ts',
-    fileIndex: 214,
-    code: `(function (global, factory) {
+});`},{fileName: "basic-area.ts", fileIndex: 214, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -16853,12 +15779,7 @@ export const codes = [
     smooth: true
   });
   tinyArea.render();
-});`,
-  },
-  {
-    fileName: 'filled-area.ts',
-    fileIndex: 215,
-    code: `(function (global, factory) {
+});`},{fileName: "filled-area.ts", fileIndex: 215, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -16884,12 +15805,7 @@ export const codes = [
     }
   });
   tinyArea.render();
-});`,
-  },
-  {
-    fileName: 'basic-column.ts',
-    fileIndex: 216,
-    code: `(function (global, factory) {
+});`},{fileName: "basic-column.ts", fileIndex: 216, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -16916,12 +15832,7 @@ export const codes = [
     }
   });
   tinyColumn.render();
-});`,
-  },
-  {
-    fileName: 'column-annotation.ts',
-    fileIndex: 217,
-    code: `(function (global, factory) {
+});`},{fileName: "column-annotation.ts", fileIndex: 217, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -16963,12 +15874,7 @@ export const codes = [
     }]
   });
   tinyColumn.render();
-});`,
-  },
-  {
-    fileName: 'basic-line.ts',
-    fileIndex: 218,
-    code: `(function (global, factory) {
+});`},{fileName: "basic-line.ts", fileIndex: 218, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -16991,12 +15897,7 @@ export const codes = [
     smooth: true
   });
   tinyLine.render();
-});`,
-  },
-  {
-    fileName: 'line-annotation.ts',
-    fileIndex: 219,
-    code: `(function (global, factory) {
+});`},{fileName: "line-annotation.ts", fileIndex: 219, code: `(function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["@antv/g2plot"], factory);
   } else if (typeof exports !== "undefined") {
@@ -17056,6 +15957,4 @@ export const codes = [
     }]
   });
   tinyLine.render();
-});`,
-  },
-];
+});`}]

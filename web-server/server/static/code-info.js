@@ -1,1 +1,1 @@
-module.exports = { chartLength: 221 };
+module.exports = {chartLength: 221};
