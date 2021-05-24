@@ -1,11 +1,20 @@
 import * as core from '@actions/core';
 import * as github from '@actions/github';
+const shell = require('shelljs');
 import { exec } from '@actions/exec';
 import { comment } from './commentToPullRequest';
 import { execSurgeCommand, formatImage, getCommentFooter } from './helpers';
 
 let failOnErrorGlobal = false;
 let fail: (err: Error) => void;
+
+async function build() {
+  const project_name = core.getInput('project_name') || 'G2Plot';
+  const project_branch = core.getInput('project_branch') || 'master';
+  shell.exec(`npx sh start.sh ${project_name} ${project_branch}`);
+  shell.exec(`ls ./public/preview`);
+  return;
+}
 
 async function main() {
   const surgeToken =
@@ -179,7 +188,12 @@ ${getCommentFooter()}
   }
 }
 
-// eslint-disable-next-line github/no-then
-main().catch((err) => {
+async function flow() {
+  await build();
+  // eslint-disable-next-line github/no-then
+  main();
+}
+
+flow().catch((err) => {
   fail?.(err);
 });

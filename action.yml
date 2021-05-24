@@ -14,15 +14,9 @@ inputs:
   project_branch:
     description: 'project branch'
     default: 'master'
-  build:
-    description: 'build scripts'
-    default: |
-      npm install
-      npm run build:preview
-    required: false
   dist:
     description: 'dist folder to deploy'
-    default: 'public'
+    default: 'public/preview'
     required: false
   failOnError:
     description: 'Set `failed` if a deployment throws error'
