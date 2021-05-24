@@ -210,6 +210,7 @@ function build() {
         return new Promise((resovle) => __awaiter(this, void 0, void 0, function* () {
             const project_name = core.getInput('project_name') || 'G2Plot';
             const project_branch = core.getInput('project_branch') || 'master';
+            yield exec_1.exec(`ls`);
             yield exec_1.exec(`npx sh start.sh ${project_name} ${project_branch}`);
             yield exec_1.exec(`ls ./public/preview`);
             resovle(null);
