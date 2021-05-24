@@ -17,12 +17,12 @@ inputs:
   build:
     description: 'build scripts'
     default: |
+      mkdir -p public/preview
       npm install
-      npm run build:preview
     required: false
   dist:
     description: 'dist folder to deploy'
-    default: 'public'
+    default: 'public/preview'
     required: false
   failOnError:
     description: 'Set `failed` if a deployment throws error'

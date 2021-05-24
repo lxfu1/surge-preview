@@ -21,6 +21,5 @@ jobs:
           build: |
             mkdir -p public/preview
             npm install
-            npm run build:preview -- public/preview
       - name: Get the output url
         run: echo "url => ${{ steps.preview_step.outputs.preview_url }}"
