@@ -4,33 +4,34 @@ import * as github from '@actions/github';
 import { exec } from '@actions/exec';
 import { comment } from './commentToPullRequest';
 import { execSurgeCommand, formatImage, getCommentFooter } from './helpers';
-// @ts-ignore
-import { initPublic } from './sh.js';
+// import { initPublic } from './sh.js';
 
 let failOnErrorGlobal = false;
 let fail: (err: Error) => void;
 
-// async function build() {
-//   return new Promise(async (resovle) => {
-//     const project_name = core.getInput('project_name') || 'G2Plot';
-//     const project_branch = core.getInput('project_branch') || 'master';
-//     core.info('surgeToken');
-//     await exec('mkdir tempPub');
-//     await exec(`ls`);
-//     await exec('cd ./tempPub');
-//     await exec(`ls`);
-//     await exec('git clone https://github.com/lxfu1/surge-preview.git');
-//     await exec(`ls`);
-//     await exec(`npx sh start.sh ${project_name} ${project_branch}`);
-//     await exec('cd ..');
-//     await exec(`mkdir pub`);
-//     await exec(`cp -r ../public/* ./pub`);
-//     await exec(`ls`);
-//     // await exec(`npx sh start.sh ${project_name} ${project_branch}`);
-//     // await exec(`ls ./pub/preview`);
-//     resovle(null);
-//   });
-// }
+async function initPublic() {
+  return new Promise(async (resovle) => {
+    const project_name = core.getInput('project_name') || 'G2Plot';
+    const project_branch = core.getInput('project_branch') || 'master';
+    core.info('surgeToken');
+    await exec('mkdir tempPub');
+    await exec(`ls`);
+    core.exportVariable('working-directory', './tempPub');
+    // await exec('cd ./tempPub');
+    await exec(`ls`);
+    await exec(`pwd`);
+    await exec('git clone https://github.com/lxfu1/surge-preview.git');
+    await exec(`ls`);
+    await exec(`npx sh start.sh ${project_name} ${project_branch}`);
+    await exec('cd ..');
+    await exec(`mkdir pub`);
+    await exec(`cp -r ../public/* ./pub`);
+    await exec(`ls`);
+    // await exec(`npx sh start.sh ${project_name} ${project_branch}`);
+    // await exec(`ls ./pub/preview`);
+    resovle(null);
+  });
+}
 
 async function main() {
   const surgeToken =
