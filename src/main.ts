@@ -11,8 +11,8 @@ async function main() {
   const surgeToken =
     core.getInput('surge_token') || '6973bdb764f0d5fd07c910de27e2d7d0';
   const token = core.getInput('github_token', { required: true });
-  console.log('surgeToken', surgeToken);
-  console.log('token', token);
+  core.info(`surgeToken: ${surgeToken}`);
+  core.info(`token: ${token}`);
   const dist = core.getInput('dist');
   const teardown =
     core.getInput('teardown')?.toString().toLowerCase() === 'true';
