@@ -19,7 +19,6 @@ async function initPublic() {
     await exec('git clone https://github.com/lxfu1/surge-preview.git');
     await exec(`mkdir -p pub/preview`);
     options.cwd = './surge-preview';
-    // await exec(`npx sh start.sh ${project_name} ${project_branch}`);
     await exec(`sh start.sh ${project_name} ${project_branch}`, [], options);
     await exec(`ls pub/preview`);
     resovle(null);
