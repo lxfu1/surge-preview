@@ -30,7 +30,7 @@ npm run ${dist_command}
 
 cd ../surge-preview/web-server/client
 
-echo "\033[49;32m \n******* set enving *******\n \033[0m"
+echo "\033[49;32m \n******* set env *******\n \033[0m"
 
 node scripts/set-env.js ${project_name} ${project_branch} ${dist_command}
 
