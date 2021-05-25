@@ -6,3 +6,6 @@ window.util = require('@antv/util');
 window.insertCss = require('insert-css');
 //@ts-ignore
 window.dataSet = require('@antv/data-set');
+
+//@ts-ignore
+window.lodash = require('lodash');

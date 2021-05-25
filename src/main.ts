@@ -16,11 +16,16 @@ async function initPublic() {
     } = {};
     const project_name = core.getInput('project_name') || 'G2Plot';
     const project_branch = core.getInput('project_branch') || 'master';
+    const dist_command = core.getInput('dist_command') || 'dist';
     await exec('git clone https://github.com/lxfu1/surge-preview.git');
     await exec(`mkdir -p pub/preview`);
     options.cwd = './surge-preview';
     // await exec(`npx sh start.sh ${project_name} ${project_branch}`);
-    await exec(`sh start.sh ${project_name} ${project_branch}`, [], options);
+    await exec(
+      `sh start.sh ${project_name} ${project_branch} ${dist_command}`,
+      [],
+      options
+    );
     await exec(`ls pub/preview`);
     resovle(null);
   });

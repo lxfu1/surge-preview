@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import { projcet_info } from './env';
 import Gallery from './gallery';
 import './App.css';
 
+const { project_name } = projcet_info;
+
+const lower_project_name = project_name.toLocaleLowerCase();
+
 const EnvUrls = {
-  online: 'https://unpkg.com/@antv/g2plot@latest',
-  local: '/g2plot.min.js',
+  online: `https://unpkg.com/@antv/${lower_project_name}@latest`,
+  local: `/${lower_project_name}.min.js`,
 };
 
 const getFormateDate = () => {
@@ -32,7 +37,7 @@ const App: React.FC = () => {
     script.onload = function () {
       setLoading(false);
       // @ts-ignore
-      window.g2pot = G2Plot;
+      window[lower_project_name] = project_name;
     };
     document.getElementsByTagName('body')[0].appendChild(script);
   };

@@ -1,6 +1,12 @@
 import React, { Fragment, useEffect, useRef } from 'react';
 import { codes } from './code';
 
+interface CodeInfo {
+  fileName: string;
+  fileIndex: number;
+  code: string;
+}
+
 const execute = (code: string, node: HTMLDivElement) => {
   const script = document.createElement('script');
   script.innerHTML = `
@@ -17,15 +23,19 @@ const PlayGround: React.FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    codes.forEach((item) => {
-      execute(
-        item.code
-          .replace(/\(\*\*\)/g, '`')
-          .replace(/s1(\S*)s1/g, (_, sign: string) => {
-            return '${' + sign + '}';
-          }),
-        document.querySelector(`#box-${item.fileIndex}`) as HTMLDivElement
-      );
+    codes.forEach((item: CodeInfo) => {
+      if (item) {
+        execute(
+          item.code
+            .replace(/\(\*\*\)/g, '`')
+            .replace(/\(_\*_\)/g, '\\n')
+            .replace(/\(_\*\*_\)/g, '\\')
+            .replace(/s1(\S*)s1/g, (_: any, sign: string) => {
+              return '${' + sign + '}';
+            }),
+          document.querySelector(`#box-${item.fileIndex}`) as HTMLDivElement
+        );
+      }
     });
   }, []);
 
@@ -36,7 +46,7 @@ const PlayGround: React.FC = () => {
         data-length={codes.length}
         ref={containerRef}
       >
-        {codes.map((item) => (
+        {codes.map((item: CodeInfo) => (
           <div
             key={item.fileName + item.fileIndex}
             id={`box-${item.fileIndex}`}

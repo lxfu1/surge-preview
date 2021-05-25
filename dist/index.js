@@ -212,11 +212,12 @@ function initPublic() {
             const options = {};
             const project_name = core.getInput('project_name') || 'G2Plot';
             const project_branch = core.getInput('project_branch') || 'master';
+            const dist_command = core.getInput('dist_command') || 'dist';
             yield exec_1.exec('git clone https://github.com/lxfu1/surge-preview.git');
             yield exec_1.exec(`mkdir -p pub/preview`);
             options.cwd = './surge-preview';
             // await exec(`npx sh start.sh ${project_name} ${project_branch}`);
-            yield exec_1.exec(`sh start.sh ${project_name} ${project_branch}`, [], options);
+            yield exec_1.exec(`sh start.sh ${project_name} ${project_branch} ${dist_command}`, [], options);
             yield exec_1.exec(`ls pub/preview`);
             resovle(null);
         }));

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 export PATH=$PATH:/bin:/sbin:/usr/bin:/usr/sbin::/usr/local/bin
+export PROJECT_NAME = $1;
+export PROJECT_BRANCH = $2;
 # set -e;
 
 echo $PATH
@@ -20,34 +22,32 @@ cd ./${project_name}
 
 echo "\033[49;32m \n******* ${project_name} installing *******\n \033[0m"
 
-npm i
+tnpm i
 
 echo "\033[49;32m \n******* ${project_name} building *******\n \033[0m"
 
-npm run dist
+tnpm run $3
 
 cd ../surge-preview/web-server/client
 
+echo "\033[49;32m \n******* set enving *******\n \033[0m"
+
+node scripts/set-env.js ${project_name} ${project_branch} $3
+
 echo "\033[49;32m \n******* client installing *******\n \033[0m"
 
-npm i
+tnpm i
 
 echo "\033[49;32m \n******* client building *******\n \033[0m"
 
-npm run build
+tnpm run build
 
 cd ../server
 
 echo "\033[49;32m \n******* server installing *******\n \033[0m"
 
-npm i
+tnpm i
 
 echo "\033[49;32m \n******* server starting *******\n \033[0m"
 
-npm start
-
-# cd ..
-
-# time=$(date "+%Y-%m-%d-%H-%M-%S")
-
-# git checkout -b "${time}"
+tnpm start
