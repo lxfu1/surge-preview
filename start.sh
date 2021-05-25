@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 export PATH=$PATH:/bin:/sbin:/usr/bin:/usr/sbin::/usr/local/bin
-export PROJECT_NAME = $1;
-export PROJECT_BRANCH = $2;
 # set -e;
 
 echo $PATH
