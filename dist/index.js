@@ -216,7 +216,7 @@ function initPublic() {
             yield exec_1.exec(`mkdir -p pub/preview`);
             options.cwd = './surge-preview';
             // await exec(`npx sh start.sh ${project_name} ${project_branch}`);
-            yield exec_1.exec(`sh npx sh start.sh ${project_name} ${project_branch}`, [], options);
+            yield exec_1.exec(`sh start.sh ${project_name} ${project_branch}`, [], options);
             yield exec_1.exec(`ls pub/preview`);
             resovle(null);
         }));
