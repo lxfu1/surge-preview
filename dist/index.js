@@ -209,23 +209,16 @@ let fail;
 function initPublic() {
     return __awaiter(this, void 0, void 0, function* () {
         return new Promise((resovle) => __awaiter(this, void 0, void 0, function* () {
-            // const project_name = core.getInput('project_name') || 'G2Plot';
-            // const project_branch = core.getInput('project_branch') || 'master';
-            yield exec_1.exec('mkdir tempPub');
-            yield exec_1.exec(`pwd`);
-            core.exportVariable('working-directory', './tempPub');
-            yield exec_1.exec(`pwd`);
-            core.addPath('/tempPub');
-            yield exec_1.exec(`pwd`);
-            // await exec('git clone https://github.com/lxfu1/surge-preview.git');
-            // await exec(`npx sh start.sh ${project_name} ${project_branch}`);
-            core.exportVariable('working-directory', '../');
-            yield exec_1.exec(`pwd`);
-            yield exec_1.exec(`mkdir pub`);
-            yield exec_1.exec(`cp -r ../public/* ./pub`);
+            const project_name = core.getInput('project_name') || 'G2Plot';
+            const project_branch = core.getInput('project_branch') || 'master';
             yield exec_1.exec(`ls`);
-            // await exec(`npx sh start.sh ${project_name} ${project_branch}`);
-            // await exec(`ls ./pub/preview`);
+            yield exec_1.exec(`pwd`);
+            yield exec_1.exec('git clone https://github.com/lxfu1/surge-preview.git');
+            yield exec_1.exec(`npx sh start.sh ${project_name} ${project_branch}`);
+            yield exec_1.exec(`ls`);
+            yield exec_1.exec(`mkdir pub`);
+            yield exec_1.exec(`cp -r public/* pub`);
+            yield exec_1.exec(`ls pub/preview`);
             resovle(null);
         }));
     });

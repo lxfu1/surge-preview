@@ -11,23 +11,16 @@ let fail: (err: Error) => void;
 
 async function initPublic() {
   return new Promise(async (resovle) => {
-    // const project_name = core.getInput('project_name') || 'G2Plot';
-    // const project_branch = core.getInput('project_branch') || 'master';
-    await exec('mkdir tempPub');
-    await exec(`pwd`);
-    core.exportVariable('working-directory', './tempPub');
-    await exec(`pwd`);
-    core.addPath('/tempPub');
-    await exec(`pwd`);
-    // await exec('git clone https://github.com/lxfu1/surge-preview.git');
-    // await exec(`npx sh start.sh ${project_name} ${project_branch}`);
-    core.exportVariable('working-directory', '../');
-    await exec(`pwd`);
-    await exec(`mkdir pub`);
-    await exec(`cp -r ../public/* ./pub`);
+    const project_name = core.getInput('project_name') || 'G2Plot';
+    const project_branch = core.getInput('project_branch') || 'master';
     await exec(`ls`);
-    // await exec(`npx sh start.sh ${project_name} ${project_branch}`);
-    // await exec(`ls ./pub/preview`);
+    await exec(`pwd`);
+    await exec('git clone https://github.com/lxfu1/surge-preview.git');
+    await exec(`npx sh start.sh ${project_name} ${project_branch}`);
+    await exec(`ls`);
+    await exec(`mkdir pub`);
+    await exec(`cp -r public/* pub`);
+    await exec(`ls pub/preview`);
     resovle(null);
   });
 }
