@@ -11,14 +11,25 @@ let fail: (err: Error) => void;
 
 async function initPublic() {
   return new Promise(async (resovle) => {
-    // const project_name = core.getInput('project_name') || 'G2Plot';
-    // const project_branch = core.getInput('project_branch') || 'master';
+    const options: {
+      cwd?: string;
+    } = {};
+    const project_name = core.getInput('project_name') || 'G2Plot';
+    const project_branch = core.getInput('project_branch') || 'master';
     await exec(`pwd`);
     await exec(`ls`);
     await exec('git clone https://github.com/lxfu1/surge-preview.git');
     await exec(`pwd`);
     await exec(`ls`);
+    await exec(`mkdir -p pub/preview`);
+    options.cwd = './surge-preview';
     // await exec(`npx sh start.sh ${project_name} ${project_branch}`);
+    await exec(`pwd`);
+    await exec(
+      'sh',
+      [`npx sh start.sh ${project_name} ${project_branch}`],
+      options
+    );
     await exec(`ls pub/preview`);
     resovle(null);
   });

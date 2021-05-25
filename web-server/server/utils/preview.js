@@ -10,7 +10,7 @@ const useStatic = async () => {
   } else {
     shell.exec(`rm -rf ${basePath}/*`);
   }
-  shell.exec(`cp -r ./static/* ${basePath}/`);
+  shell.exec(`cp -r ./static/* ../${basePath}/`);
   process.exit();
 };
 
