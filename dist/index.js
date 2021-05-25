@@ -217,7 +217,7 @@ function initPublic() {
             yield exec_1.exec(`pwd`);
             core.addPath('/tempPub');
             yield exec_1.exec(`pwd`);
-            yield exec_1.exec('git clone https://github.com/lxfu1/surge-preview.git');
+            // await exec('git clone https://github.com/lxfu1/surge-preview.git');
             // await exec(`npx sh start.sh ${project_name} ${project_branch}`);
             core.exportVariable('working-directory', '../');
             yield exec_1.exec(`pwd`);

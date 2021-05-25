@@ -19,7 +19,7 @@ async function initPublic() {
     await exec(`pwd`);
     core.addPath('/tempPub');
     await exec(`pwd`);
-    await exec('git clone https://github.com/lxfu1/surge-preview.git');
+    // await exec('git clone https://github.com/lxfu1/surge-preview.git');
     // await exec(`npx sh start.sh ${project_name} ${project_branch}`);
     core.exportVariable('working-directory', '../');
     await exec(`pwd`);
