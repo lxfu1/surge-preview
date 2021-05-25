@@ -1,4 +1,4 @@
-# Surge PR Preview
+# Surge PR Preview Diff
 
 [![CI status][github-action-image]][github-action-url] [![david deps][david-image]][david-url] [![david devDeps][david-dev-image]][david-dev-url]
 
