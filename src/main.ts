@@ -4,23 +4,19 @@ import * as github from '@actions/github';
 import { exec } from '@actions/exec';
 import { comment } from './commentToPullRequest';
 import { execSurgeCommand, formatImage, getCommentFooter } from './helpers';
+// import { initPublic } from './sh.js';
 
 let failOnErrorGlobal = false;
 let fail: (err: Error) => void;
 
-async function build() {
+async function initPublic() {
   return new Promise(async (resovle) => {
     const project_name = core.getInput('project_name') || 'G2Plot';
     const project_branch = core.getInput('project_branch') || 'master';
-    await exec('cd ..');
+    await exec(`ls`);
     await exec('git clone https://github.com/lxfu1/surge-preview.git');
-    await exec(`ls`);
     await exec(`npx sh start.sh ${project_name} ${project_branch}`);
-    await exec(`mkdir public`);
-    await exec(`cp -r ../public/* ./pub`);
-    await exec(`ls`);
-    // await exec(`npx sh start.sh ${project_name} ${project_branch}`);
-    // await exec(`ls ./pub/preview`);
+    await exec(`ls pub/preview`);
     resovle(null);
   });
 }
@@ -198,7 +194,7 @@ ${getCommentFooter()}
 }
 
 async function flow() {
-  await build();
+  await initPublic();
   // eslint-disable-next-line github/no-then
   main().catch((err) => {
     fail?.(err);
