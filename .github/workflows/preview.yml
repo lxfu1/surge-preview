@@ -10,14 +10,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Branch name
-        run: echo running on branch ${GITHUB_HEAD_REF}
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
       - uses: ./
         id: preview_step
         name: test lxfu1/surge-preview
         with:
           surge_token: ${{ secrets.SURGE_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          project_branch: ${GITHUB_REF##*/}
+          project_branch: ${{ steps.extract_branch.outputs.branch }}
           teardown: 'true'
           dist: pub/preview
           build: |
