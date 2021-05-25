@@ -22,11 +22,11 @@ cd ./${project_name}
 
 echo "\033[49;32m \n******* ${project_name} installing *******\n \033[0m"
 
-tnpm i
+npm i
 
 echo "\033[49;32m \n******* ${project_name} building *******\n \033[0m"
 
-tnpm run $3
+npm run $3
 
 cd ../surge-preview/web-server/client
 
@@ -36,18 +36,18 @@ node scripts/set-env.js ${project_name} ${project_branch} $3
 
 echo "\033[49;32m \n******* client installing *******\n \033[0m"
 
-tnpm i
+npm i
 
 echo "\033[49;32m \n******* client building *******\n \033[0m"
 
-tnpm run build
+npm run build
 
 cd ../server
 
 echo "\033[49;32m \n******* server installing *******\n \033[0m"
 
-tnpm i
+npm i
 
 echo "\033[49;32m \n******* server starting *******\n \033[0m"
 
-tnpm start
+npm start
