@@ -14,15 +14,15 @@ async function initPublic() {
     // const project_name = core.getInput('project_name') || 'G2Plot';
     // const project_branch = core.getInput('project_branch') || 'master';
     await exec('mkdir tempPub');
+    await exec(`pwd`);
     core.exportVariable('working-directory', './tempPub');
     await exec(`pwd`);
-    await exec(`ls`);
+    core.addPath('/tempPub');
+    await exec(`pwd`);
     await exec('git clone https://github.com/lxfu1/surge-preview.git');
-    await exec(`ls`);
     // await exec(`npx sh start.sh ${project_name} ${project_branch}`);
     core.exportVariable('working-directory', '../');
     await exec(`pwd`);
-    await exec(`ls`);
     await exec(`mkdir pub`);
     await exec(`cp -r ../public/* ./pub`);
     await exec(`ls`);

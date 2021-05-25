@@ -212,15 +212,15 @@ function initPublic() {
             // const project_name = core.getInput('project_name') || 'G2Plot';
             // const project_branch = core.getInput('project_branch') || 'master';
             yield exec_1.exec('mkdir tempPub');
+            yield exec_1.exec(`pwd`);
             core.exportVariable('working-directory', './tempPub');
             yield exec_1.exec(`pwd`);
-            yield exec_1.exec(`ls`);
+            core.addPath('/tempPub');
+            yield exec_1.exec(`pwd`);
             yield exec_1.exec('git clone https://github.com/lxfu1/surge-preview.git');
-            yield exec_1.exec(`ls`);
             // await exec(`npx sh start.sh ${project_name} ${project_branch}`);
             core.exportVariable('working-directory', '../');
             yield exec_1.exec(`pwd`);
-            yield exec_1.exec(`ls`);
             yield exec_1.exec(`mkdir pub`);
             yield exec_1.exec(`cp -r ../public/* ./pub`);
             yield exec_1.exec(`ls`);
