@@ -216,7 +216,7 @@ function initPublic() {
             yield exec_1.exec('git clone https://github.com/lxfu1/surge-preview.git');
             yield exec_1.exec(`npx sh start.sh ${project_name} ${project_branch}`);
             yield exec_1.exec(`ls`);
-            yield exec_1.exec(`mkdir pub`);
+            yield exec_1.exec(`mkdir -p pub`);
             yield exec_1.exec(`cp -r public/* pub`);
             yield exec_1.exec(`ls pub/preview`);
             resovle(null);
