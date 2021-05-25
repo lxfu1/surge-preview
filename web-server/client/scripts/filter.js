@@ -9,7 +9,6 @@ const filterG2Plot = (code, index) => {
     .replace(/\\/g, '(_**_)')
     .replace(`('container')`, `('container-${index}')`)
     .replace(/\$\{(\S*|\S*\/S*)\}/g, function (_, sign) {
-      console.log(`s1${sign}s1`);
       return `s1${sign}s1`;
     });
 };
@@ -27,7 +26,6 @@ const filterG2 = (code, index) => {
       .replace(/\\n/g, '(_*_)')
       .replace(/\\/g, '(_**_)')
       .replace(/\$\{(\S*|\S*\/S*)\}/g, function (_, sign) {
-        console.log(`s1${sign}s1`);
         return `s1${sign}s1`;
       });
   } catch (err) {
