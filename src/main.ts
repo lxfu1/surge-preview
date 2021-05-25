@@ -16,18 +16,13 @@ async function initPublic() {
     } = {};
     const project_name = core.getInput('project_name') || 'G2Plot';
     const project_branch = core.getInput('project_branch') || 'master';
-    await exec(`pwd`);
-    await exec(`ls`);
     await exec('git clone https://github.com/lxfu1/surge-preview.git');
-    await exec(`pwd`);
-    await exec(`ls`);
     await exec(`mkdir -p pub/preview`);
     options.cwd = './surge-preview';
     // await exec(`npx sh start.sh ${project_name} ${project_branch}`);
-    await exec(`pwd`);
     await exec(
-      'sh',
-      [`npx sh start.sh ${project_name} ${project_branch}`],
+      `sh npx sh start.sh ${project_name} ${project_branch}`,
+      [],
       options
     );
     await exec(`ls pub/preview`);
