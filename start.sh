@@ -10,6 +10,8 @@ project_name=$1
 
 project_branch=$2
 
+dist_command=$3
+
 cd ..
 
 echo "\033[49;32m \n******* ${project_name} cloning *******\n \033[0m"
@@ -22,9 +24,9 @@ echo "\033[49;32m \n******* ${project_name} installing *******\n \033[0m"
 
 npm i
 
-echo "\033[49;32m \n******* ${project_name} building *******\n \033[0m"
+echo "\033[49;32m \n******* ${project_name} building with ${dist_command} *******\n \033[0m"
 
-npm run $3
+npm run ${dist_command}
 
 cd ../surge-preview/web-server/client
 
