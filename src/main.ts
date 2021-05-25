@@ -1,10 +1,8 @@
 import * as core from '@actions/core';
 import * as github from '@actions/github';
-// const shell = require('shelljs');
 import { exec } from '@actions/exec';
 import { comment } from './commentToPullRequest';
 import { execSurgeCommand, formatImage, getCommentFooter } from './helpers';
-// import { initPublic } from './sh.js';
 
 let failOnErrorGlobal = false;
 let fail: (err: Error) => void;

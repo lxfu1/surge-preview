@@ -1,9 +1,11 @@
 const shell = require('shelljs');
 const { project_name } = require('./env');
 
+const lower_project_name = project_name.toLocaleLowerCase();
+
 // 复制本地 g2plot.min.js
 shell.exec(
-  `cp -r ../../../${project_name}/dist/${project_name}.min.js ../server/static`
+  `cp -r ../../../${project_name}/dist/${lower_project_name}.min.js ../server/static`
 );
 // 删除 server 静态文件
 shell.exec('rm -rf ../server/static/assets');

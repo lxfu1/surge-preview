@@ -15,9 +15,9 @@ jobs:
         with:
           surge_token: ${{ secrets.SURGE_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          project_branch: ${GITHUB_REF##*/}
           teardown: 'true'
           dist: pub/preview
-
           build: |
             mkdir -p pub/preview
             npm install

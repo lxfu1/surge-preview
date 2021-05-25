@@ -199,11 +199,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(6841));
 const github = __importStar(__nccwpck_require__(1840));
-// const shell = require('shelljs');
 const exec_1 = __nccwpck_require__(5441);
 const commentToPullRequest_1 = __nccwpck_require__(582);
 const helpers_1 = __nccwpck_require__(5261);
-// import { initPublic } from './sh.js';
 let failOnErrorGlobal = false;
 let fail;
 function initPublic() {
