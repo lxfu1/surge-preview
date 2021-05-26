@@ -21,6 +21,26 @@
   color: rgba(0, 0, 0, 0.65);
 }
 
+.diff-info {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 32px;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+  color: #697b8c;
+}
+
+.diff-info > span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 33%;
+  text-align: center;
+}
+
 .diff-box {
   width: 100vw;
   justify-content: space-around;
