@@ -38,6 +38,8 @@ const getImageData = async (path: string): Promise<ImageData> => {
       canvas.height = height;
       ctx.drawImage(img, 0, 0);
       resolve(ctx.getImageData(0, 0, width, height));
+      document.body.removeChild(img);
+      document.body.removeChild(canvas);
     };
     document.body.appendChild(img);
     document.body.appendChild(canvas);
