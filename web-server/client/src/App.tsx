@@ -12,6 +12,38 @@ const EnvUrls = {
   local: `/${lower_project_name}.min.js`,
 };
 
+const isEqual = (source: number[], target: number[]) => {
+  let result = true;
+  source.forEach((item: number, index: number) => {
+    if (item !== target[index]) {
+      result = false;
+    }
+  });
+  return result;
+};
+
+const getImageData = async (path: string): Promise<ImageData> => {
+  return new Promise((resolve) => {
+    const img = document.createElement('img');
+    const canvas = document.createElement('canvas');
+    img.src = path;
+    img.style.display = 'none';
+    canvas.style.display = 'none';
+    img.onload = () => {
+      const { width, height } = img;
+      canvas.style.width = width + 'px';
+      canvas.style.height = height + 'px';
+      const ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
+      canvas.width = width;
+      canvas.height = height;
+      ctx.drawImage(img, 0, 0);
+      resolve(ctx.getImageData(0, 0, width, height));
+    };
+    document.body.appendChild(img);
+    document.body.appendChild(canvas);
+  });
+};
+
 const getFormateDate = () => {
   const date = new Date();
   const year = date.getFullYear();
@@ -24,6 +56,7 @@ const getFormateDate = () => {
 
 const App: React.FC = () => {
   const [laoding, setLoading] = useState(true);
+  const [diff, setDiff] = useState(0);
   const [showDiff, setShowDiff] = useState(false);
   const createScripts = (type: string) => {
     const exist = document.getElementById('dynamic-scripts');
@@ -61,6 +94,38 @@ const App: React.FC = () => {
     }
   }, []);
 
+  const caculateDiff = async () => {
+    const basePath = `/file/${getFormateDate()}`;
+    const { data: localData } = await getImageData(`${basePath}/local.png`);
+    const { data: onlineData } = await getImageData(`${basePath}/online.png`);
+    let diffLength = 0;
+    const dataLength = localData.length;
+    for (let i = 0; i < dataLength; i += 4) {
+      const currentLocalData = [
+        localData[i],
+        localData[i + 1],
+        localData[i + 2],
+        localData[i + 3],
+      ];
+      const currentOnlineData = [
+        onlineData[i],
+        onlineData[i + 1],
+        onlineData[i + 2],
+        onlineData[i + 3],
+      ];
+      if (!isEqual(currentLocalData, currentOnlineData)) {
+        diffLength += 1;
+      }
+    }
+    setDiff((diffLength * 100) / Math.ceil(dataLength / 4));
+  };
+
+  useEffect(() => {
+    if (showDiff) {
+      caculateDiff();
+    }
+  }, [showDiff]);
+
   if (laoding) {
     return <div className="loading">脚本加载中</div>;
   }
@@ -70,9 +135,11 @@ const App: React.FC = () => {
     return (
       <Fragment>
         <div className="diff-info">
-          <span>{project_branch}</span>
-          <span>diff</span>
-          <span>online</span>
+          <span>当前分支：{project_branch}</span>
+          <span style={{ fontWeight: 'bold', color: 'red' }}>
+            差异度：{diff.toFixed(2)}%
+          </span>
+          <span>线上CDN</span>
         </div>
         <div className="diff-box">
           <img src={`${basePath}/local.png`} alt="local" />
