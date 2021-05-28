@@ -58,7 +58,7 @@ const getFormateDate = () => {
 
 const App: React.FC = () => {
   const [laoding, setLoading] = useState(true);
-  const [diff, setDiff] = useState(0);
+  const [diff, setDiff] = useState<string | number>('');
   const [showDiff, setShowDiff] = useState(false);
   const createScripts = (type: string) => {
     const exist = document.getElementById('dynamic-scripts');
@@ -135,11 +135,16 @@ const App: React.FC = () => {
   if (showDiff) {
     const basePath = `/file/${getFormateDate()}`;
     return (
-      <Fragment>
+      <div className="box">
         <div className="diff-info">
           <span>当前分支：{project_branch}</span>
-          <span style={{ fontWeight: 'bold', color: 'red' }}>
-            差异度：{diff.toFixed(2)}%
+          <span style={{ fontWeight: 'bold' }}>
+            差异度：
+            {typeof diff === 'string' ? (
+              <span style={{ color: 'green' }}>计算中...</span>
+            ) : (
+              <span style={{ color: 'red' }}>{diff.toFixed(2)}%</span>
+            )}
           </span>
           <span>线上CDN</span>
         </div>
@@ -148,7 +153,7 @@ const App: React.FC = () => {
           <img src={`${basePath}/diff.png`} alt="diff" />
           <img src={`${basePath}/online.png`} alt="online" />
         </div>
-      </Fragment>
+      </div>
     );
   }
 

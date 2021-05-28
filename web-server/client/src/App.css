@@ -21,7 +21,14 @@
   color: rgba(0, 0, 0, 0.65);
 }
 
+.box {
+  padding-top: 32px;
+}
+
 .diff-info {
+  position: fixed;
+  left: 0;
+  top: 0;
   width: 100vw;
   display: flex;
   justify-content: space-around;
@@ -30,6 +37,7 @@
   border-bottom: 1px solid #ccc;
   font-size: 14px;
   color: #697b8c;
+  background-color: #fff;
 }
 
 .diff-info > span {
