@@ -134,7 +134,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.getCommentFooter = exports.formatImage = exports.execSurgeCommand = void 0;
+exports.getFormateDate = exports.getCommentFooter = exports.formatImage = exports.execSurgeCommand = void 0;
 const exec_1 = __nccwpck_require__(5441);
 const execSurgeCommand = ({ command, }) => __awaiter(void 0, void 0, void 0, function* () {
     let myOutput = '';
@@ -159,6 +159,17 @@ const getCommentFooter = () => {
     return '<sub>🤖 By [surge-preview](https://github.com/lxfu1/surge-preview)</sub>';
 };
 exports.getCommentFooter = getCommentFooter;
+const addZero = (type) => {
+    return `0${type}`;
+};
+const getFormateDate = () => {
+    const date = new Date();
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+    return `${year}-${month > 9 ? month : addZero(month)}-${day > 9 ? day : addZero(day)}`;
+};
+exports.getFormateDate = getFormateDate;
 
 
 /***/ }),
@@ -355,7 +366,7 @@ ${helpers_1.getCommentFooter()}
                 command: ['surge', `./${dist}`, url, `--token`, surgeToken],
             });
             commentIfNotForkedRepo(`
-🎊 PR Preview ${gitCommitSha} has been successfully built and deployed to https://${url}?type=diff
+🎊 PR Preview ${gitCommitSha} has been successfully built and deployed to https://${url}?type=diff&date=${helpers_1.getFormateDate()}
 
 :clock1: Build time: **${duration}s**
 

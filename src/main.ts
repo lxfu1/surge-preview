@@ -2,7 +2,12 @@ import * as core from '@actions/core';
 import * as github from '@actions/github';
 import { exec } from '@actions/exec';
 import { comment } from './commentToPullRequest';
-import { execSurgeCommand, formatImage, getCommentFooter } from './helpers';
+import {
+  execSurgeCommand,
+  formatImage,
+  getCommentFooter,
+  getFormateDate,
+} from './helpers';
 
 let failOnErrorGlobal = false;
 let fail: (err: Error) => void;
@@ -184,7 +189,7 @@ ${getCommentFooter()}
     });
 
     commentIfNotForkedRepo(`
-🎊 PR Preview ${gitCommitSha} has been successfully built and deployed to https://${url}?type=diff
+🎊 PR Preview ${gitCommitSha} has been successfully built and deployed to https://${url}?type=diff&date=${getFormateDate()}
 
 :clock1: Build time: **${duration}s**
 

@@ -46,16 +46,6 @@ const getImageData = async (path: string): Promise<ImageData> => {
   });
 };
 
-const getFormateDate = () => {
-  const date = new Date();
-  const year = date.getFullYear();
-  const month = date.getMonth() + 1;
-  const day = date.getDate();
-  return `${year}-${month > 9 ? month : '0' + month}-${
-    day > 9 ? day : '0' + day
-  }`;
-};
-
 const App: React.FC = () => {
   const [laoding, setLoading] = useState(true);
   const [diff, setDiff] = useState<string | number>('');
@@ -76,18 +66,18 @@ const App: React.FC = () => {
     };
     document.getElementsByTagName('body')[0].appendChild(script);
   };
-  const getParams = () => {
+  const getParams = (key: string) => {
     const param = window.location.search.split('?')[1]?.split('&') || [];
     const params: { [key: string]: string } = {};
     param.forEach((item: string) => {
       const [key, value] = item.split('=');
       params[key] = value;
     });
-    return params.type;
+    return params[key];
   };
   useEffect(() => {
     // 查看 diff 结果
-    const type = getParams();
+    const type = getParams('type');
     if (type === 'diff') {
       setLoading(false);
       setShowDiff(true);
@@ -97,7 +87,7 @@ const App: React.FC = () => {
   }, []);
 
   const caculateDiff = async () => {
-    const basePath = `/file/${getFormateDate()}`;
+    const basePath = `/file/${getParams('date')}`;
     const { data: localData } = await getImageData(`${basePath}/local.png`);
     const { data: onlineData } = await getImageData(`${basePath}/online.png`);
     let diffLength = 0;
@@ -133,7 +123,7 @@ const App: React.FC = () => {
   }
 
   if (showDiff) {
-    const basePath = `/file/${getFormateDate()}`;
+    const basePath = `/file/${getParams('date')}`;
     return (
       <div className="box">
         <div className="diff-info">

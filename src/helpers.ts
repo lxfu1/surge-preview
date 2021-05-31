@@ -34,3 +34,17 @@ export const formatImage = ({
 export const getCommentFooter = () => {
   return '<sub>🤖 By [surge-preview](https://github.com/lxfu1/surge-preview)</sub>';
 };
+
+const addZero = (type: number) => {
+  return `0${type}`;
+};
+
+export const getFormateDate = () => {
+  const date = new Date();
+  const year = date.getFullYear();
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+  return `${year}-${month > 9 ? month : addZero(month)}-${
+    day > 9 ? day : addZero(day)
+  }`;
+};
