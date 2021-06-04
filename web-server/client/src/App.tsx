@@ -12,14 +12,21 @@ const EnvUrls = {
   local: `/${lower_project_name}.min.js`,
 };
 
-const isEqual = (source: number[], target: number[]) => {
-  let result = true;
+const getColorsInfo = (source: number[], target: number[]) => {
+  let isEqual = true;
+  let available = false;
   source.forEach((item: number, index: number) => {
+    if (item || target[index]) {
+      available = true;
+    }
     if (item !== target[index]) {
-      result = false;
+      isEqual = false;
     }
   });
-  return result;
+  return {
+    available,
+    isEqual,
+  };
 };
 
 const getImageData = async (path: string): Promise<ImageData> => {
@@ -91,6 +98,7 @@ const App: React.FC = () => {
     const { data: localData } = await getImageData(`${basePath}/local.png`);
     const { data: onlineData } = await getImageData(`${basePath}/online.png`);
     let diffLength = 0;
+    let availableDataLength = 0;
     const dataLength = localData.length;
     for (let i = 0; i < dataLength; i += 4) {
       const currentLocalData = [
@@ -105,11 +113,21 @@ const App: React.FC = () => {
         onlineData[i + 2],
         onlineData[i + 3],
       ];
-      if (!isEqual(currentLocalData, currentOnlineData)) {
+      const { available, isEqual } = getColorsInfo(
+        currentLocalData,
+        currentOnlineData
+      );
+      if (available) {
+        availableDataLength += 1;
+      }
+      if (!isEqual) {
         diffLength += 1;
       }
     }
-    setDiff((diffLength * 100) / Math.ceil(dataLength / 4));
+    if (!availableDataLength) {
+      availableDataLength = 1;
+    }
+    setDiff((diffLength * 100) / Math.ceil(availableDataLength / 4));
   };
 
   useEffect(() => {
