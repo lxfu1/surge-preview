@@ -32,7 +32,7 @@ export const formatImage = ({
 };
 
 export const getCommentFooter = () => {
-  return '<sub>🤖 By [surge-preview](https://github.com/lxfu1/surge-preview)</sub>';
+  return '<sub>🤖 By [Surge Ui Insight](https://github.com/lxfu1/surge-preview)</sub>';
 };
 
 const addZero = (type: number) => {
