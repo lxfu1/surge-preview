@@ -156,7 +156,7 @@ const formatImage = ({ buildingLogUrl, imageUrl, }) => {
 };
 exports.formatImage = formatImage;
 const getCommentFooter = () => {
-    return '<sub>🤖 By [surge-preview](https://github.com/lxfu1/surge-preview)</sub>';
+    return '<sub>🤖 By [Surge Ui Insight](https://github.com/lxfu1/surge-preview)</sub>';
 };
 exports.getCommentFooter = getCommentFooter;
 const addZero = (type) => {
@@ -2902,8 +2902,8 @@ exports.createTokenAuth = createTokenAuth;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 
 var universalUserAgent = __nccwpck_require__(6393);
-var beforeAfterHook = __nccwpck_require__(1399);
-var request = __nccwpck_require__(7318);
+var beforeAfterHook = __nccwpck_require__(6996);
+var request = __nccwpck_require__(6618);
 var graphql = __nccwpck_require__(9970);
 var authToken = __nccwpck_require__(5755);
 
@@ -3482,7 +3482,7 @@ exports.endpoint = endpoint;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 
-var request = __nccwpck_require__(7318);
+var request = __nccwpck_require__(6618);
 var universalUserAgent = __nccwpck_require__(6393);
 
 const VERSION = "4.6.2";
@@ -5050,7 +5050,7 @@ exports.RequestError = RequestError;
 
 /***/ }),
 
-/***/ 7318:
+/***/ 6618:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -5066,13 +5066,15 @@ var isPlainObject = __nccwpck_require__(7080);
 var nodeFetch = _interopDefault(__nccwpck_require__(9792));
 var requestError = __nccwpck_require__(903);
 
-const VERSION = "5.4.15";
+const VERSION = "5.5.0";
 
 function getBufferResponse(response) {
   return response.arrayBuffer();
 }
 
 function fetchWrapper(requestOptions) {
+  const log = requestOptions.request && requestOptions.request.log ? requestOptions.request.log : console;
+
   if (isPlainObject.isPlainObject(requestOptions.body) || Array.isArray(requestOptions.body)) {
     requestOptions.body = JSON.stringify(requestOptions.body);
   }
@@ -5094,6 +5096,12 @@ function fetchWrapper(requestOptions) {
 
     for (const keyAndValue of response.headers) {
       headers[keyAndValue[0]] = keyAndValue[1];
+    }
+
+    if ("deprecation" in headers) {
+      const matches = headers.link && headers.link.match(/<([^>]+)>; rel="deprecation"/);
+      const deprecationLink = matches && matches.pop();
+      log.warn(`[@octokit/request] "${requestOptions.method} ${requestOptions.url}" is deprecated. It is scheduled to be removed on ${headers.sunset}${deprecationLink ? `. See ${deprecationLink}` : ""}`);
     }
 
     if (status === 204 || status === 205) {
@@ -5208,12 +5216,12 @@ exports.request = request;
 
 /***/ }),
 
-/***/ 1399:
+/***/ 6996:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-var register = __nccwpck_require__(1937)
-var addHook = __nccwpck_require__(4945)
-var removeHook = __nccwpck_require__(2881)
+var register = __nccwpck_require__(7598)
+var addHook = __nccwpck_require__(3889)
+var removeHook = __nccwpck_require__(557)
 
 // bind with array of arguments: https://stackoverflow.com/a/21792913
 var bind = Function.bind
@@ -5272,7 +5280,7 @@ module.exports.Collection = Hook.Collection
 
 /***/ }),
 
-/***/ 4945:
+/***/ 3889:
 /***/ ((module) => {
 
 module.exports = addHook;
@@ -5325,7 +5333,7 @@ function addHook(state, kind, name, hook) {
 
 /***/ }),
 
-/***/ 1937:
+/***/ 7598:
 /***/ ((module) => {
 
 module.exports = register;
@@ -5359,7 +5367,7 @@ function register(state, name, method, options) {
 
 /***/ }),
 
-/***/ 2881:
+/***/ 557:
 /***/ ((module) => {
 
 module.exports = removeHook;
