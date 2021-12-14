@@ -2,9 +2,15 @@ const fs = require('fs');
 const path = require('path');
 const { transform } = require('@babel/standalone');
 const { project_name } = require('./env');
-const { filterG2Plot, filterG2 } = require('./filter');
+const { filterG2Plot, filterG2, filterG } = require('./filter');
 const basePath = '../../../';
-const fp = path.resolve(basePath, `${project_name}/examples`);
+const specialProject = ['G'];
+const fp = path.resolve(
+  basePath,
+  specialProject.includes(project_name)
+    ? `${project_name}/packages/site/examples`
+    : `${project_name}/examples`
+);
 const codePath = path.resolve('./src');
 
 const codes = [];
@@ -20,7 +26,9 @@ const setCodesLength = () => {
   //  用于计算浏览器高度
   fs.writeFileSync(
     path.resolve(__dirname, '../../server/static/code-info.js'),
-    `module.exports = {chartLength: ${index + 1}};`,
+    `module.exports = {chartLength: ${
+      index + 1
+    }, project_name: ${project_name}};`,
     'utf8'
   );
 };
@@ -33,11 +41,14 @@ const filterCode = (code) => {
   if (project_name === 'G2') {
     return filterG2(code, index);
   }
+  if (project_name === 'G') {
+    return filterG(code, index);
+  }
   return code;
 };
 
 // 特殊文件不做处理
-const specialFile = [];
+const specialFile = ['arrow.js'];
 
 const scanFiles = (foldPath, dir) => {
   try {
@@ -48,11 +59,17 @@ const scanFiles = (foldPath, dir) => {
       if (stats.isDirectory()) {
         scanFiles(director, dir ? `${dir}.${fileName}` : fileName);
       }
-      if (stats.isFile() && fileName.endsWith('.ts')) {
+      if (
+        stats.isFile() &&
+        (fileName.endsWith('.ts') || fileName.endsWith('.js')) &&
+        !fileName.includes('.d.ts')
+      ) {
         const filePath = path.resolve(
           __dirname,
           basePath,
-          `../${project_name}/examples`,
+          specialProject.includes(project_name)
+            ? `../${project_name}/packages/site/examples`
+            : `../${project_name}/examples`,
           dir.split('.').join('/'),
           fileName
         );

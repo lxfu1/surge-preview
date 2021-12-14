@@ -33,7 +33,38 @@ const filterG2 = (code, index) => {
   }
 };
 
+const filterG = (code, index) => {
+  try {
+    return code
+      .replace(/container\:\s+'\w+',/g, `container: 'container-${index}',`)
+      .replace(
+        /.getElementById\('container'\);/g,
+        `.getElementById('container-${index}');`
+      )
+      .replace(/`/g, '(**)')
+      .replace(/\_gCanvas\./g, 'G.Canvas2D.')
+      .replace(/\_gWebgl\./g, 'G.WebGL.')
+      .replace(/\_gSvg\./g, 'G.SVG.')
+      .replace(/\_gPlugin3d\./g, `G['3D'].`)
+      .replace(/\_gPluginCssSelect\./g, 'G.CSSSelect.')
+      .replace(/\_gPluginControl\./g, 'G.Control.')
+      .replace(/\_gComponents\./g, 'G.Components.')
+      .replace(/\_stats\.default/g, 'Stats')
+      .replace(/\_hammerjs\.default/g, 'Hammer')
+      .replace(/\_interactjs\.default/g, 'interact')
+      .replace(/\_g\./g, 'G.')
+      .replace(/\\n/g, '(_*_)')
+      .replace(/\\/g, '(_**_)')
+      .replace(/\$\{(\S*|\S*\/S*)\}/g, function (_, sign) {
+        return `s1${sign}s1`;
+      });
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 module.exports = {
   filterG2Plot,
   filterG2,
+  filterG,
 };

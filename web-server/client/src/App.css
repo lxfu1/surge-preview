@@ -11,6 +11,11 @@
   height: 200px;
   margin-bottom: 24px;
 }
+.g-container > div > div {
+  width: 600px;
+  height: 500px;
+  margin-bottom: 24px;
+}
 
 .loading {
   width: 100vw;
@@ -64,4 +69,8 @@
 }
 .diff-box > img:last-child {
   border-right: none;
+}
+/** 隐藏 dat.gui */
+.dg {
+  display: none;
 }

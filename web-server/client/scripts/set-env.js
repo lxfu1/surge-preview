@@ -3,7 +3,7 @@ const path = require('path');
 
 const arg = process.argv.splice(2);
 
-const [project_name, project_branch, build_command] = arg;
+const [project_name, project_branch, build_command, tag = 'latest'] = arg;
 
 fs.writeFileSync(
   path.resolve(__dirname, './env.js'),
@@ -11,6 +11,7 @@ fs.writeFileSync(
   project_name: '${project_name}',
   project_branch: '${project_branch}',
   build_command: '${build_command}',
+  tag: '${tag}',
 };\nmodule.exports = projcet_info;`
 );
 
@@ -20,5 +21,6 @@ fs.writeFileSync(
   project_name: '${project_name}',
   project_branch: '${project_branch}',
   build_command: '${build_command}',
+  tag: '${tag}',
 };`
 );

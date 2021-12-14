@@ -24,6 +24,7 @@ pids
 *.pid.lock
 /web-server/server/static/*.js
 /web-server/server/static/assets
+/web-server/server/static/g-*
 /web-server/client/src/code.ts
 /web-server/*/*/env.*
 

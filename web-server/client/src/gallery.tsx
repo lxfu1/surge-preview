@@ -1,12 +1,14 @@
 import React, { Fragment, useEffect, useRef } from 'react';
+import cls from 'classnames';
 import { codes } from './code';
+import { projcet_info } from './env';
 
 interface CodeInfo {
   fileName: string;
   fileIndex: number;
   code: string;
 }
-
+const { project_name } = projcet_info;
 const execute = (code: string, node: HTMLDivElement) => {
   const script = document.createElement('script');
   script.innerHTML = `
@@ -42,7 +44,9 @@ const PlayGround: React.FC = () => {
   return (
     <Fragment>
       <div
-        className="charts-container"
+        className={cls('charts-container', {
+          ['g-container']: project_name === 'G',
+        })}
         data-length={codes.length}
         ref={containerRef}
       >

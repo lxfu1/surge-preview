@@ -4,10 +4,10 @@ const delay = require('delay');
 const chalk = require('chalk');
 const compareImage = require('./compare');
 const { getFormateDate } = require('./util');
-const { chartLength } = require('../static/code-info');
+const { chartLength, project_name } = require('../static/code-info');
 
-const renderTime = 24000; // 确保图片能全部渲染完成
-const singleChartHeight = 224; // 单个图表的高度，一行 4 个
+const renderTime = project_name === 'G' ? 60000 : 24000; // 确保图片能全部渲染完成
+const singleChartHeight = project_name === 'G' ? 500 : 224; // 单个图表的高度，一行 4 个
 
 const createBrowser = async () => {
   const dateString = getFormateDate();
@@ -19,7 +19,10 @@ const createBrowser = async () => {
   console.log(chalk.green('\n****** 在线截图生成中 ******\n'));
   const onlineBrowser = await puppeteer.launch();
   const onlinePage = await onlineBrowser.newPage();
-  const viewHeight = Math.ceil(chartLength / 4) * singleChartHeight + 48;
+  const viewHeight =
+    project_name === 'G'
+      ? Math.ceil(chartLength / 2) * singleChartHeight + 48
+      : Math.ceil(chartLength / 4) * singleChartHeight + 48;
   await onlinePage.setViewport({
     width: 1440,
     height: viewHeight,

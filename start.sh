@@ -12,6 +12,8 @@ project_branch=$2
 
 dist_command=$3
 
+tag=$4
+
 cd ..
 
 echo "\033[49;32m \n******* ${project_name} cloning *******\n \033[0m"
@@ -32,7 +34,7 @@ cd ../surge-preview/web-server/client
 
 echo "\033[49;32m \n******* set env *******\n \033[0m"
 
-node scripts/set-env.js ${project_name} ${project_branch} ${dist_command}
+node scripts/set-env.js ${project_name} ${project_branch} ${dist_command} ${tag}
 
 echo "\033[49;32m \n******* client installing *******\n \033[0m"
 
