@@ -28,7 +28,7 @@ const setCodesLength = () => {
     path.resolve(__dirname, '../../server/static/code-info.js'),
     `module.exports = {chartLength: ${
       index + 1
-    }, project_name: ${project_name}};`,
+    }, project_name: '${project_name}'};`,
     'utf8'
   );
 };
