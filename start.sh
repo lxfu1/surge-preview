@@ -24,11 +24,20 @@ cd ./${project_name}
 
 echo "\033[49;32m \n******* ${project_name} installing *******\n \033[0m"
 
-npm i
+if [ ${project_name} = 'G' ];then
+    yarn
+else
+    npm i
+fi
 
 echo "\033[49;32m \n******* ${project_name} building with ${dist_command} *******\n \033[0m"
 
-npm run ${dist_command}
+if [ ${project_name} = 'G' ];then
+    yarn build
+    yarn ${dist_command}
+else
+    npm run ${dist_command}
+fi
 
 cd ../surge-preview/web-server/client
 
