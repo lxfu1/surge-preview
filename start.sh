@@ -24,11 +24,7 @@ cd ./${project_name}
 
 echo "\033[49;32m \n******* ${project_name} installing *******\n \033[0m"
 
-if [ ${project_name} = 'G' ];then
-    yarn
-else
-    npm i
-fi
+yarn
 
 echo "\033[49;32m \n******* ${project_name} building with ${dist_command} *******\n \033[0m"
 
@@ -39,7 +35,7 @@ if [ ${project_name} = 'G' ];then
     yarn build
     yarn ${dist_command}
 else
-    npm run ${dist_command}
+    yarn run ${dist_command}
 fi
 
 cd ../surge-preview/web-server/client
@@ -50,18 +46,18 @@ node scripts/set-env.js ${project_name} ${project_branch} ${dist_command} ${tag}
 
 echo "\033[49;32m \n******* client installing *******\n \033[0m"
 
-npm i
+yarn
 
 echo "\033[49;32m \n******* client building *******\n \033[0m"
 
-npm run build
+yarn run build
 
 cd ../server
 
 echo "\033[49;32m \n******* server installing *******\n \033[0m"
 
-npm i
+yarn
 
 echo "\033[49;32m \n******* server starting *******\n \033[0m"
 
-npm start
+yarn start
