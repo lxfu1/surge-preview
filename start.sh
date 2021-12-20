@@ -16,18 +16,6 @@ tag=$4
 
 pwd
 
-cd ~
-
-echo "~ path"
-
-pwd
-
-cd /
-
-echo "/ path"
-
-pwd
-
 cd ..
 
 pwd
@@ -38,6 +26,8 @@ git clone -b ${project_branch} https://github.com/antvis/${project_name}.git
 
 cd ./${project_name}
 
+pwd
+
 echo "\033[49;32m \n******* ${project_name} installing *******\n \033[0m"
 
 yarn
@@ -46,14 +36,12 @@ echo "\033[49;32m \n******* ${project_name} building with ${dist_command} ******
 
 pwd
 
-# if [ ${project_name} = 'G' ];then
-#     yarn build
-#     yarn ${dist_command}
-# else
-#     yarn run ${dist_command}
-# fi
-
-yarn run ${dist_command}
+if [ ${project_name} = 'G' ];then
+    yarn build
+    yarn ${dist_command}
+else
+    yarn run ${dist_command}
+fi
 
 cd ../surge-preview/web-server/client
 
