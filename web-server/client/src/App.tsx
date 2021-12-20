@@ -12,7 +12,7 @@ const lower_project_name = project_name.toLocaleLowerCase();
 
 /** 适用于一个构建产物 */
 const EnvUrls = {
-  online: `/${lower_project_name}@${tag}`,
+  online: `https://unpkg.com/@antv/${lower_project_name}@${tag}`,
   local: `/${lower_project_name}.min.js`,
 };
 
