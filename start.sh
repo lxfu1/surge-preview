@@ -16,6 +16,18 @@ tag=$4
 
 pwd
 
+cd ~
+
+echo "~ path"
+
+pwd
+
+cd /
+
+echo "/ path"
+
+pwd
+
 cd ..
 
 pwd
