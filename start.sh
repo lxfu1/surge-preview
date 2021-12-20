@@ -32,6 +32,9 @@ fi
 
 echo "\033[49;32m \n******* ${project_name} building with ${dist_command} *******\n \033[0m"
 
+pwd
+ls
+
 if [ ${project_name} = 'G' ];then
     yarn build
     yarn ${dist_command}
