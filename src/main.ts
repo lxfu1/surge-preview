@@ -171,8 +171,8 @@ ${getCommentFooter()}
   const startTime = Date.now();
   try {
     if (!core.getInput('build')) {
-      await exec(`npm install`);
-      await exec(`npm run build`);
+      await exec(`yarn`);
+      await exec(`yarn run build`);
     } else {
       const buildCommands = core.getInput('build').split('\n');
       for (const command of buildCommands) {
