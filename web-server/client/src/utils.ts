@@ -120,7 +120,7 @@ export const getMultiUrls = (
       ],
       local: [
         {
-          src: `/dist/charts.min.js`,
+          src: `/charts.min.js`,
         },
       ],
     },
