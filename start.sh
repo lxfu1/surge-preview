@@ -28,6 +28,8 @@ else
    git clone -b ${project_branch} https://github.com/antvis/${project_name}.git
 fi
 
+ls
+
 cd ./${project_name}
 
 pwd
