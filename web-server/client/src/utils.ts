@@ -104,7 +104,7 @@ export const getMultiUrls = (
         },
       ],
     },
-    'ANT-DESIGN-CHARTS': {
+    'ant-design-charts': {
       // 样式使用同一套
       styles: [
         'https://unpkg.com/browse/antd@4/dist/antd.css',

@@ -9,7 +9,7 @@ const {
   filterAntDesignCharts,
 } = require('./filter');
 const basePath = '../../../';
-const specialProject = ['G', 'ANT-DESIGN-CHARTS'];
+const specialProject = ['G', 'ant-design-charts'];
 const fp = path.resolve(
   basePath,
   specialProject.includes(project_name)
@@ -49,7 +49,7 @@ const filterCode = (code) => {
   if (project_name === 'G') {
     return filterG(code, index);
   }
-  if (project_name === 'ANT-DESIGN-CHARTS') {
+  if (project_name === 'ant-design-charts') {
     return filterAntDesignCharts(code, index);
   }
   return code;

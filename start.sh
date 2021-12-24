@@ -22,7 +22,7 @@ pwd
 
 echo "\033[49;32m \n******* ${project_name} cloning *******\n \033[0m"
 
-if [ ${project_name} = 'ANT-DESIGN-CHARTS' ];then
+if [ ${project_name} = 'ant-design-charts' ];then
    git clone -b ${project_branch} https://github.com/ant-design/ant-design-charts.git
 else
    git clone -b ${project_branch} https://github.com/antvis/${project_name}.git

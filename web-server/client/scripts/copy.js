@@ -27,7 +27,7 @@ if (project_name === 'G') {
     }
   };
   scanDir(fp);
-} else if (project_name === 'ANT-DESIGN-CHARTS') {
+} else if (project_name === 'ant-design-charts') {
   shell.exec(
     `cp -r ../../../${project_name}/packages/charts/dist/charts.min.js ../server/static`
   );
