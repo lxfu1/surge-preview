@@ -1,10 +1,15 @@
 const fs = require('fs');
 const path = require('path');
-const { transform } = require('@babel/standalone');
+const { transform, registerPlugin } = require('@babel/standalone');
 const { project_name } = require('./env');
-const { filterG2Plot, filterG2, filterG } = require('./filter');
+const {
+  filterG2Plot,
+  filterG2,
+  filterG,
+  filterAntDesignCharts,
+} = require('./filter');
 const basePath = '../../../';
-const specialProject = ['G'];
+const specialProject = ['G', 'ANT-DESIGN-CHARTS'];
 const fp = path.resolve(
   basePath,
   specialProject.includes(project_name)
@@ -43,6 +48,9 @@ const filterCode = (code) => {
   }
   if (project_name === 'G') {
     return filterG(code, index);
+  }
+  if (project_name === 'ANT-DESIGN-CHARTS') {
+    return filterAntDesignCharts(code, index);
   }
   return code;
 };

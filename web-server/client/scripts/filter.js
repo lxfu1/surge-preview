@@ -63,8 +63,33 @@ const filterG = (code, index) => {
   }
 };
 
+const filterAntDesignCharts = (code, index) => {
+  try {
+    return code
+      .replace(
+        /getElementById\('container'\)/g,
+        `getElementById('container-${index}')`
+      )
+      .replace(/`/g, '(**)')
+      .replace(/\_charts\./g, 'Charts.')
+      .replace(/fetch\(/g, 'window.fetch(')
+      .replace(/\_react\.default\./g, 'React.')
+      .replace(/\_react\./g, 'React.')
+      .replace(/\_reactDom\.default\./g, 'ReactDOM.')
+      .replace(/\_dataSet\./g, 'DataSet.')
+      .replace(/\\n/g, '(_*_)')
+      .replace(/\\/g, '(_**_)')
+      .replace(/\$\{(\S*|\S*\/S*)\}/g, function (_, sign) {
+        return `s1${sign}s1`;
+      });
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 module.exports = {
   filterG2Plot,
   filterG2,
   filterG,
+  filterAntDesignCharts,
 };
