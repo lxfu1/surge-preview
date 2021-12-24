@@ -105,6 +105,7 @@ export const getMultiUrls = (
       ],
     },
     'ANT-DESIGN-CHARTS': {
+      // 样式使用同一套
       styles: [
         'https://unpkg.com/browse/antd@4/dist/antd.css',
         'https://unpkg.com/@ant-design/charts@latest/dist/index.css',

@@ -27,6 +27,10 @@ if (project_name === 'G') {
     }
   };
   scanDir(fp);
+} else if (project_name === 'ANT-DESIGN-CHARTS') {
+  shell.exec(
+    `cp -r ../../../${project_name}/packages/charts/dist/charts.min.js ../server/static`
+  );
 } else {
   const lower_project_name = project_name.toLocaleLowerCase();
   // 复制本地 g2plot.min.js
