@@ -12,10 +12,13 @@ const compress = require('koa-compress');
 const koaBody = require('koa-body');
 const BaseConfig = require('./config');
 const Router = require('./routers');
+const koa2Timeout = require('./utils/timeout');
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 const app = new Koa();
 
+// 设置 10 分钟的超时
+app.use(koa2Timeout(10 * 60 * 1000));
 /**
  * 中间件， 防止服务器挂掉
  * */
