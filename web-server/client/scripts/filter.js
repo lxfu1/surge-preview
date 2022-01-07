@@ -71,7 +71,10 @@ const filterAntDesignCharts = (code, index) => {
         `getElementById('container-${index}')`
       )
       .replace(/`/g, '(**)')
-      .replace(/\_charts\./g, 'Charts.')
+      .replace(/\_maps\./g, 'Maps.')
+      .replace(/\_graphs\./g, 'Graphs.')
+      .replace(/\_plots\./g, 'Plots.')
+      .replace(/\_flowchart\./g, 'Flowchart.')
       .replace(/fetch\(/g, 'window.fetch(')
       .replace(/\_react\.default\./g, 'React.')
       .replace(/\_react\./g, 'React.')

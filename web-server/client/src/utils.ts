@@ -112,7 +112,16 @@ export const getMultiUrls = (
       ],
       online: [
         {
-          src: `https://unpkg.com/@ant-design/charts@${tag}`,
+          src: `https://unpkg.com/@ant-design/plots@${tag}`,
+        },
+        {
+          src: `https://unpkg.com/@ant-design/maps@${tag}`,
+        },
+        {
+          src: `https://unpkg.com/@ant-design/flowchart@${tag}`,
+        },
+        {
+          src: `https://unpkg.com/@ant-design/graphs@${tag}`,
         },
         {
           src: 'https://unpkg.com/@antv/data-set@latest',
@@ -120,7 +129,16 @@ export const getMultiUrls = (
       ],
       local: [
         {
-          src: `/charts.min.js`,
+          src: `/plots.min.js`,
+        },
+        {
+          src: `/maps.min.js`,
+        },
+        {
+          src: `/flowchart.min.js`,
+        },
+        {
+          src: `/graphs.min.js`,
         },
       ],
     },

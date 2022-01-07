@@ -29,7 +29,16 @@ if (project_name === 'G') {
   scanDir(fp);
 } else if (project_name === 'ant-design-charts') {
   shell.exec(
-    `cp -r ../../../${project_name}/packages/charts/dist/charts.min.js ../server/static`
+    `cp -r ../../../${project_name}/packages/plots/dist/plots.min.js ../server/static`
+  );
+  shell.exec(
+    `cp -r ../../../${project_name}/packages/maps/dist/maps.min.js ../server/static`
+  );
+  shell.exec(
+    `cp -r ../../../${project_name}/packages/flowchart/dist/flowchart.min.js ../server/static`
+  );
+  shell.exec(
+    `cp -r ../../../${project_name}/packages/graphs/dist/graphs.min.js ../server/static`
   );
 } else {
   const lower_project_name = project_name.toLocaleLowerCase();
