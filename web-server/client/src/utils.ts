@@ -61,15 +61,15 @@ export const getMultiUrls = (
       ],
       local: [
         {
-          src: `/g/index.umd.js`,
+          src: `/g/index.umd.min.js`,
           order: 0,
         },
         {
-          src: `/g-webgl/index.umd.js`,
+          src: `/g-webgl/index.umd.min.js`,
           order: 1,
         },
         {
-          src: `/g-plugin-webgl-renderer/index.umd.js`,
+          src: `/g-plugin-webgl-renderer/index.umd.min.js`,
           order: 2,
         },
         {
@@ -85,22 +85,22 @@ export const getMultiUrls = (
           src: `https://unpkg.com/dat.gui@latest`,
         },
         {
-          src: `/g-components/index.umd.js`,
+          src: `/g-components/index.umd.min.js`,
         },
         {
-          src: `/g-plugin-control/index.umd.js`,
+          src: `/g-plugin-control/index.umd.min.js`,
         },
         {
-          src: `/g-plugin-css-select/index.umd.js`,
+          src: `/g-plugin-css-select/index.umd.min.js`,
         },
         {
-          src: `/g-canvas/index.umd.js`,
+          src: `/g-canvas/index.umd.min.js`,
         },
         {
-          src: `/g-svg/index.umd.js`,
+          src: `/g-svg/index.umd.min.js`,
         },
         {
-          src: `/g-plugin-3d/index.umd.js`,
+          src: `/g-plugin-3d/index.umd.min.js`,
         },
       ],
     },
