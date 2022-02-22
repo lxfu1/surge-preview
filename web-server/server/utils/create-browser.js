@@ -10,7 +10,7 @@ const {
   page_demo_number,
 } = require('../static/code-info');
 
-const renderTime = project_name === 'G' ? 60000 : 24000; // 确保图片能全部渲染完成
+const renderTime = project_name === 'G' ? 30000 : 12000; // 确保图片能全部渲染完成
 const singleChartHeight = project_name === 'G' ? 500 : 224; // 单个图表的高度，一行 4 个
 
 const createBrowser = async () => {
