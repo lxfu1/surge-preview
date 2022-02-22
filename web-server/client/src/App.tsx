@@ -1,13 +1,19 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import { get, find, isNumber, filter, isUndefined } from 'lodash';
 import { projcet_info } from './env';
+import { codes } from './code';
 import Gallery from './gallery';
-import { getMultiUrls } from './utils';
+import { getMultiUrls, getParams } from './utils';
 import './App.css';
 
 type Type = 'online' | 'local';
 
-const { project_name, project_branch, tag } = projcet_info;
+const {
+  project_name,
+  project_branch,
+  tag,
+  page_demo_number = codes.length,
+} = projcet_info;
 
 const lower_project_name = project_name.toLocaleLowerCase();
 
@@ -64,6 +70,9 @@ const App: React.FC = () => {
   const [laoding, setLoading] = useState(true);
   const [diff, setDiff] = useState<string | number>('');
   const [showDiff, setShowDiff] = useState(false);
+  const imageArray = new Array(Math.ceil(codes.length / page_demo_number))
+    .fill('')
+    .map((_, i) => i);
   const createLinks = () => {
     // 流程图需要 antd 依赖
     const { styles = [] } = MultiEnvUrls[project_name];
@@ -175,15 +184,7 @@ const App: React.FC = () => {
     };
     document.getElementsByTagName('body')[0].appendChild(script);
   };
-  const getParams = (key: string) => {
-    const param = window.location.search.split('?')[1]?.split('&') || [];
-    const params: { [key: string]: string } = {};
-    param.forEach((item: string) => {
-      const [key, value] = item.split('=');
-      params[key] = value;
-    });
-    return params[key];
-  };
+
   useEffect(() => {
     // 查看 diff 结果
     const type = getParams('type');
@@ -202,35 +203,42 @@ const App: React.FC = () => {
 
   const caculateDiff = async () => {
     const basePath = `/file/${getParams('date')}`;
-    const { data: localData } = await getImageData(`${basePath}/local.png`);
-    const { data: onlineData } = await getImageData(`${basePath}/online.png`);
-    let diffLength = 0;
     let availableDataLength = 0;
-    const dataLength = localData.length;
-    for (let i = 0; i < dataLength; i += 4) {
-      const currentLocalData = [
-        localData[i],
-        localData[i + 1],
-        localData[i + 2],
-        localData[i + 3],
-      ];
-      const currentOnlineData = [
-        onlineData[i],
-        onlineData[i + 1],
-        onlineData[i + 2],
-        onlineData[i + 3],
-      ];
-      const { available, isEqual } = getColorsInfo(
-        currentLocalData,
-        currentOnlineData
+    let diffLength = 0;
+    imageArray.forEach(async (_, index) => {
+      const { data: localData } = await getImageData(
+        `${basePath}/local_${index}.png`
       );
-      if (available) {
-        availableDataLength += 1;
+      const { data: onlineData } = await getImageData(
+        `${basePath}/online_${index}.png`
+      );
+
+      const dataLength = localData.length;
+      for (let i = 0; i < dataLength; i += 4) {
+        const currentLocalData = [
+          localData[i],
+          localData[i + 1],
+          localData[i + 2],
+          localData[i + 3],
+        ];
+        const currentOnlineData = [
+          onlineData[i],
+          onlineData[i + 1],
+          onlineData[i + 2],
+          onlineData[i + 3],
+        ];
+        const { available, isEqual } = getColorsInfo(
+          currentLocalData,
+          currentOnlineData
+        );
+        if (available) {
+          availableDataLength += 1;
+        }
+        if (!isEqual) {
+          diffLength += 1;
+        }
       }
-      if (!isEqual) {
-        diffLength += 1;
-      }
-    }
+    });
     if (!availableDataLength) {
       availableDataLength = 1;
     }
@@ -264,9 +272,33 @@ const App: React.FC = () => {
           <span>线上CDN</span>
         </div>
         <div className="diff-box">
-          <img src={`${basePath}/local.png`} alt="local" />
-          <img src={`${basePath}/diff.png`} alt="diff" />
-          <img src={`${basePath}/online.png`} alt="online" />
+          <div className="local">
+            {imageArray.map((_, index) => (
+              <img
+                key={index}
+                src={`${basePath}/local_${index}.png`}
+                alt="local"
+              />
+            ))}
+          </div>
+          <div className="diff">
+            {imageArray.map((_, index) => (
+              <img
+                key={index}
+                src={`${basePath}/diff_${index}.png`}
+                alt="diff"
+              />
+            ))}
+          </div>
+          <div className="online">
+            {imageArray.map((_, index) => (
+              <img
+                key={index}
+                src={`${basePath}/online_${index}.png`}
+                alt="online"
+              />
+            ))}
+          </div>
         </div>
       </div>
     );

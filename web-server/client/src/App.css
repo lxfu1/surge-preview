@@ -61,15 +61,20 @@
   overflow-y: scroll;
 }
 
-.diff-box > img {
+.diff-box > div {
   display: block;
   width: 33%;
   height: auto;
   border-right: 1px solid #ccc;
 }
-.diff-box > img:last-child {
+.diff-box > div:last-child {
   border-right: none;
 }
+.diff-box img {
+  width: 100%;
+  display: block;
+}
+
 /** 隐藏 dat.gui */
 .dg {
   display: none;

@@ -4,8 +4,7 @@ const PNG = require('pngjs').PNG;
 const pixelmatch = require('pixelmatch');
 const useStatic = require('./preview');
 
-const compareImage = (path1, path2, basePath) => {
-  console.log(chalk.green('\n****** 截图比对中 ******\n'));
+const compareImage = (path1, path2, basePath, index, finished) => {
   const img1 = PNG.sync.read(fs.readFileSync(path1));
   const img2 = PNG.sync.read(fs.readFileSync(path2));
   const { width, height } = img1;
@@ -13,10 +12,12 @@ const compareImage = (path1, path2, basePath) => {
   pixelmatch(img1.data, img2.data, diff.data, width, height, {
     threshold: 0.1,
   });
-  const diffPath = `${basePath}/diff.png`;
+  const diffPath = `${basePath}/diff_${index}.png`;
   fs.writeFileSync(diffPath, PNG.sync.write(diff));
-  console.log(chalk.green('\n****** 截图比对完成 ******\n'));
-  useStatic();
+  if (finished) {
+    console.log(chalk.green('\n****** 截图比对完成 ******\n'));
+    useStatic();
+  }
 };
 
 module.exports = compareImage;

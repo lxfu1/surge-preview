@@ -25,6 +25,7 @@ async function initPublic() {
     await exec(`mkdir -p pub/preview`);
     options.cwd = './surge-preview';
     // await exec(`npx sh start.sh ${project_name} ${project_branch}`);
+    //eg: sh start.sh G2Plot feat/plots-comments build latest
     await exec(
       `sh start.sh ${project_name} ${project_branch} ${dist_command} ${tag}`,
       [],

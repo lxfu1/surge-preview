@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { transform, registerPlugin } = require('@babel/standalone');
-const { project_name } = require('./env');
+const { project_name, page_demo_number } = require('./env');
 const {
   filterG2Plot,
   filterG2,
@@ -33,7 +33,7 @@ const setCodesLength = () => {
     path.resolve(__dirname, '../../server/static/code-info.js'),
     `module.exports = {chartLength: ${
       index + 1
-    }, project_name: '${project_name}'};`,
+    }, project_name: '${project_name}',page_demo_number: ${page_demo_number}};`,
     'utf8'
   );
 };
