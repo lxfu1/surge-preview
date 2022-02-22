@@ -24,7 +24,7 @@ const createBrowser = async () => {
     .map((_, i) => i);
   console.log(chalk.green('\n****** 在线截图生成中 ******\n'));
   // 在线截图
-  imageArray.forEach(async (_, i) => {
+  for (const i of imageArray) {
     const onlineBrowser = await puppeteer.launch();
     const onlinePage = await onlineBrowser.newPage();
     const viewHeight =
@@ -67,7 +67,7 @@ const createBrowser = async () => {
       i,
       i === imageArray.length - 1
     );
-  });
+  }
 };
 
 module.exports = createBrowser;

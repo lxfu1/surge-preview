@@ -205,7 +205,7 @@ const App: React.FC = () => {
     const basePath = `/file/${getParams('date')}`;
     let availableDataLength = 0;
     let diffLength = 0;
-    imageArray.forEach(async (_, index) => {
+    for (const index of imageArray) {
       const { data: localData } = await getImageData(
         `${basePath}/local_${index}.png`
       );
@@ -238,7 +238,7 @@ const App: React.FC = () => {
           diffLength += 1;
         }
       }
-    });
+    }
     if (!availableDataLength) {
       availableDataLength = 1;
     }
