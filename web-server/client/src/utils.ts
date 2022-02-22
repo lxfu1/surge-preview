@@ -58,6 +58,9 @@ export const getMultiUrls = (
         {
           src: `https://unpkg.com/@antv/g-plugin-3d@${tag}`,
         },
+        {
+          src: `https://unpkg.com/@antv/react-g@${tag}`,
+        },
       ],
       local: [
         {
@@ -101,6 +104,9 @@ export const getMultiUrls = (
         },
         {
           src: `/g-plugin-3d/index.umd.min.js`,
+        },
+        {
+          src: `/react-g/index.umd.min.js`,
         },
       ],
     },
