@@ -5,7 +5,7 @@ const arg = process.argv.splice(2);
 
 const [project_name, project_branch, build_command, tag = 'latest'] = arg;
 
-const pageDemoNumber = 40;
+const pageDemoNumber = 20;
 
 fs.writeFileSync(
   path.resolve(__dirname, './env.js'),
