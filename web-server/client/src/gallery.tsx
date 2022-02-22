@@ -2,13 +2,13 @@ import React, { Fragment, useEffect, useRef } from 'react';
 import cls from 'classnames';
 import { codes } from './code';
 import { projcet_info } from './env';
-
+import { getParams } from './utils';
 interface CodeInfo {
   fileName: string;
   fileIndex: number;
   code: string;
 }
-const { project_name } = projcet_info;
+const { project_name, page_demo_number } = projcet_info;
 const execute = (code: string, node: HTMLDivElement) => {
   const script = document.createElement('script');
   script.innerHTML = `
@@ -21,11 +21,21 @@ const execute = (code: string, node: HTMLDivElement) => {
   node.appendChild(script);
 };
 
+const getAvailableCodes = () => {
+  const pageIndex = getParams('page_index');
+  if (!pageIndex) {
+    return codes;
+  }
+  const startCodes = page_demo_number * Number(pageIndex);
+  return codes.slice(startCodes, startCodes + page_demo_number);
+};
+
 const PlayGround: React.FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const availableCodes = getAvailableCodes();
 
   useEffect(() => {
-    codes.forEach((item: CodeInfo) => {
+    availableCodes.forEach((item: CodeInfo) => {
       if (item) {
         execute(
           item.code
@@ -50,7 +60,7 @@ const PlayGround: React.FC = () => {
         data-length={codes.length}
         ref={containerRef}
       >
-        {codes.map((item: CodeInfo) => (
+        {availableCodes.map((item: CodeInfo) => (
           <div
             key={item.fileName + item.fileIndex}
             id={`box-${item.fileIndex}`}

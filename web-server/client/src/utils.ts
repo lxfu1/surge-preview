@@ -144,3 +144,13 @@ export const getMultiUrls = (
     },
   };
 };
+
+export const getParams = (key: string) => {
+  const param = window.location.search.split('?')[1]?.split('&') || [];
+  const params: { [key: string]: string } = {};
+  param.forEach((item: string) => {
+    const [key, value] = item.split('=');
+    params[key] = value;
+  });
+  return params[key];
+};
