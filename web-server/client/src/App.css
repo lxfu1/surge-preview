@@ -79,3 +79,7 @@
 .dg {
   display: none;
 }
+/** 帧率组件 */
+.g-container .canvas-container > div {
+  display: none;
+}

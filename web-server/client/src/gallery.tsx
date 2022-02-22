@@ -65,7 +65,10 @@ const PlayGround: React.FC = () => {
             key={item.fileName + item.fileIndex}
             id={`box-${item.fileIndex}`}
           >
-            <div id={`container-${item.fileIndex}`}></div>
+            <div
+              id={`container-${item.fileIndex}`}
+              className="canvas-container"
+            ></div>
           </div>
         ))}
       </div>

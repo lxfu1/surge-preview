@@ -15,7 +15,10 @@ if (project_name === 'G') {
         if (stats.isDirectory() && !director.includes('node_modules')) {
           scanDir(director, dir ? `${dir}.${filename}` : filename);
         }
-        if (stats.isFile() && filename === 'index.umd.js') {
+        if (
+          stats.isFile() &&
+          ['index.umd.js', 'index.umd.min.js'].includes(filename)
+        ) {
           const directorArray = director.split('/');
           const directorName = directorArray[directorArray.length - 3];
           shell.exec(`mkdir ../server/static/${directorName}`);

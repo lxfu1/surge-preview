@@ -53,6 +53,7 @@ const filterG = (code, index) => {
       .replace(/\_hammerjs\.default/g, 'Hammer')
       .replace(/\_interactjs\.default/g, 'interact')
       .replace(/\_g\./g, 'G.')
+      .replace(/\_d3Force3d\./g, 'd3.')
       .replace(/\\n/g, '(_*_)')
       .replace(/\\/g, '(_**_)')
       .replace(/\$\{(\S*|\S*\/S*)\}/g, function (_, sign) {

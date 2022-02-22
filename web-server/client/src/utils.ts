@@ -29,6 +29,9 @@ export const getMultiUrls = (
           order: 2,
         },
         {
+          src: `https://unpkg.com/d3-force-3d@latest`,
+        },
+        {
           src: `https://unpkg.com/stats.js@latest`,
         },
         {
@@ -74,6 +77,9 @@ export const getMultiUrls = (
         {
           src: `/g-plugin-webgl-renderer/index.umd.min.js`,
           order: 2,
+        },
+        {
+          src: `https://unpkg.com/d3-force-3d@latest`,
         },
         {
           src: `https://unpkg.com/stats.js@latest`,
