@@ -107,4 +107,20 @@ const scanFiles = (foldPath, dir) => {
   }
 };
 
+// 文件路径是否存在，不存在时直接创建
+const checkDirExist = (folderpath) => {
+  const pathArr = folderpath.split('/');
+  let _path = '';
+  for (let i = 0; i < pathArr.length; i++) {
+    if (pathArr[i]) {
+      _path += `/${pathArr[i]}`;
+      if (!fs.existsSync(_path)) {
+        fs.mkdirSync(_path);
+      }
+    }
+  }
+};
+
+checkDirExist(path.resolve(__dirname, '../../server/static/file'));
+
 scanFiles(fp);
