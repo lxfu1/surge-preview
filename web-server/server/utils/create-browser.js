@@ -27,10 +27,14 @@ const createBrowser = async () => {
   for (const i of imageArray) {
     const onlineBrowser = await puppeteer.launch();
     const onlinePage = await onlineBrowser.newPage();
+    const availableNumber = Math.min(
+      page_demo_number,
+      chartLength - i * page_demo_number
+    );
     const viewHeight =
       project_name === 'G'
-        ? Math.ceil(page_demo_number / 2) * singleChartHeight + 48
-        : Math.ceil(page_demo_number / 4) * singleChartHeight + 48;
+        ? Math.ceil(availableNumber / 2) * singleChartHeight + 48
+        : Math.ceil(availableNumber / 4) * singleChartHeight + 48;
     await onlinePage.setViewport({
       width: 1440,
       height: viewHeight,
