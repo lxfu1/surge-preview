@@ -58,6 +58,18 @@ const getImageData = async (path: string): Promise<ImageData> => {
       canvas.height = height;
       ctx.drawImage(img, 0, 0);
       resolve(ctx.getImageData(0, 0, width, height));
+      clean();
+    };
+    img.onerror = () => {
+      console.error(
+        `资源：${path} 加载失败，可能会影响 diff 结果，请刷新页面重试`
+      );
+      resolve({
+        data: [],
+      } as any);
+      clean();
+    };
+    const clean = () => {
       document.body.removeChild(img);
       document.body.removeChild(canvas);
     };
