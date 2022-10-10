@@ -14,6 +14,10 @@ dist_command=$3
 
 tag=$4
 
+echo "\033[49;32m \n******* installing pnpm *******\n \033[0m"
+
+npm i pnpm@latest -g
+
 pwd
 
 cd ..
@@ -41,17 +45,17 @@ ls
 
 echo "\033[49;32m \n******* ${project_name} installing *******\n \033[0m"
 
-yarn
+pnpm i
 
 echo "\033[49;32m \n******* ${project_name} building with ${dist_command} *******\n \033[0m"
 
 pwd
 
 if [ ${project_name} = 'G' ];then
-    yarn build
-    yarn ${dist_command}
+    pnpm build
+    pnpm ${dist_command}
 else
-    yarn run ${dist_command}
+    pnpm run ${dist_command}
 fi
 
 cd ../surge-preview/web-server/client
@@ -66,18 +70,18 @@ node scripts/set-env.js ${project_name} ${project_branch} ${dist_command} ${tag}
 
 echo "\033[49;32m \n******* client installing *******\n \033[0m"
 
-yarn
+pnpm i
 
 echo "\033[49;32m \n******* client building *******\n \033[0m"
 
-yarn run build
+pnpm run build
 
 cd ../server
 
 echo "\033[49;32m \n******* server installing *******\n \033[0m"
 
-yarn
+pnpm i
 
 echo "\033[49;32m \n******* server starting *******\n \033[0m"
 
-yarn start
+pnpm start
