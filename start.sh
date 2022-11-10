@@ -60,6 +60,8 @@ else
     pnpm run ${dist_command}
 fi
 
+rm -rf .npmrc
+
 cd ./surge-preview/web-server/client
 
 pwd
@@ -72,7 +74,6 @@ node scripts/set-env.js ${project_name} ${project_branch} ${dist_command} ${tag}
 
 echo "\033[49;32m \n******* client installing *******\n \033[0m"
 
-pnpm -v
 
 pnpm i
 
