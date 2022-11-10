@@ -16,6 +16,8 @@ tag=$4
 
 echo "\033[49;32m \n******* installing pnpm *******\n \033[0m"
 
+ls
+
 npm i pnpm@latest -g
 
 pwd
@@ -26,12 +28,12 @@ pwd
 
 echo "\033[49;32m \n******* ${project_name} cloning *******\n \033[0m"
 
-if [ ${project_name} = 'ant-design-charts' ];then
-  git clone -b ${project_branch} https://github.com/ant-design/ant-design-charts.git
-else
-  pwd
-  git clone -b ${project_branch} https://github.com/antvis/${project_name}.git
-fi
+# if [ ${project_name} = 'ant-design-charts' ];then
+#   git clone -b ${project_branch} https://github.com/ant-design/ant-design-charts.git
+# else
+#   pwd
+#   git clone -b ${project_branch} https://github.com/antvis/${project_name}.git
+# fi
 
 pwd
 
