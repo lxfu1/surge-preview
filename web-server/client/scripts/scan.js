@@ -74,8 +74,8 @@ const scanFiles = (foldPath, dir) => {
           __dirname,
           basePath,
           specialProject.includes(project_name)
-            ? `../${project_name}/packages/site/examples`
-            : `../${project_name}/examples`,
+            ? `../packages/site/examples`
+            : `../examples`,
           dir.split('.').join('/'),
           fileName
         );
