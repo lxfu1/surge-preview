@@ -35,11 +35,11 @@ echo "\033[49;32m \n******* ${project_name} cloning *******\n \033[0m"
 #   git clone -b ${project_branch} https://github.com/antvis/${project_name}.git
 # fi
 
-pwd
+# pwd
 
-ls
+# ls
 
-cd ./${project_name}
+# cd ./${project_name}
 
 pwd
 
@@ -60,7 +60,7 @@ else
     pnpm run ${dist_command}
 fi
 
-cd ../surge-preview/web-server/client
+cd ./surge-preview/web-server/client
 
 pwd
 
