@@ -12,9 +12,7 @@ const basePath = '../../../';
 const specialProject = ['G', 'ant-design-charts'];
 const fp = path.resolve(
   basePath,
-  specialProject.includes(project_name)
-    ? `${project_name}/packages/site/examples`
-    : `${project_name}/examples`
+  specialProject.includes(project_name) ? `packages/site/examples` : `examples`
 );
 const codePath = path.resolve('./src');
 
